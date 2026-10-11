@@ -63,6 +63,7 @@ void solve_audit(const Dense& a,const std::vector<double>& b,const bspai::CudaIr
     check(r.solver.history.back().diagnostics.normwise_backward_error<=bspai::ir_backward_tolerance(),"GPU P IR fixed outer acceptance");for(const auto& t:r.inner_transfers)check(t.arnoldi_vector_uploads==0&&t.arnoldi_vector_downloads==0,"GPU P IR inner vector residency");
 }
 }
+#ifndef BSPAI_CUDA_SPAI_HELPERS_ONLY
 int main(){using bspai::SpaiStatus;try{
     std::cout<<std::setprecision(17);const Dense a={{4,1,0},{2,5,1},{0,1,3}};bspai::SpaiOptions o;o.epsilon=1e-12;o.alpha=2;o.beta=8;
     const auto full=compare(a,o);const auto repeat=bspai::cuda_construct_spai(matrix(a),o);check(full.construction.inverse.values()==repeat.construction.inverse.values()&&full.construction.preconditioner.values()==repeat.construction.preconditioner.values(),"fixed-stack repeated GPU construction bitwise values");
@@ -93,3 +94,4 @@ int main(){using bspai::SpaiStatus;try{
     ir.spai.epsilon=1e-12;const auto failure=bspai::cuda_gpu_spai_gmres_ir(matrix({{1,2},{1,2}}),{1,0},ir);check(failure.solver.status==bspai::IrStatus::construction_failure&&!failure.solver.converged&&failure.context_constructions==0,"failed GPU construction prevents inner context/partial P use");
 }catch(const std::exception& e){++failures;std::cerr<<"UNEXPECTED EXCEPTION: "<<e.what()<<'\n';}
 std::cout<<"Independent CUDA SPAI validation: "<<checks<<" checks, "<<failures<<" failures\n";return failures?1:0;}
+#endif

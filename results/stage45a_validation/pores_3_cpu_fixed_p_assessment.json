@@ -1,0 +1,39 @@
+{
+  "classification": "solver_success",
+  "substatus": "success",
+  "phase": "solve",
+  "backend": "cpu_fixed_p",
+  "terminal_Decimal_diagnostics": {
+    "inf": "4.8298761237836456183276878088895662668498021366147563291061709782E-12",
+    "norm2": "1.1315055555808699252171522559665273741422406358833642519192653629860785575083382E-11",
+    "nbe": "9.5831742894663056991695866378952190604384145409246663171525205476813183124870914E-17",
+    "cbe": "1.8640776717048635097659991718617745282783325745856718861355936617345431510090227E-16",
+    "nbe_allowance": "5.5470521616253055870376266478807308223352666178856684462181515115561571437002973E-15"
+  },
+  "terminal_boundary_uncertain": false,
+  "checks": 1739,
+  "failures": [],
+  "validation_outcome": "pass",
+  "name": "pores_3",
+  "raw_record": "results\\stage45a_validation\\pores_3_cpu_fixed_p.jsonl",
+  "command": [
+    "C:\\Users\\Anirudh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "scripts/untimed_screen.py",
+    "--runner",
+    "build/validation-cuda/untimed_screen.exe",
+    "--matrix",
+    "data\\stage45a_provenance_20261011\\pores_3\\pores_3.mtx",
+    "--provenance",
+    "data\\stage45a_provenance_20261011\\MANIFEST.json",
+    "--backend",
+    "cpu_fixed_p",
+    "--alpha",
+    "67",
+    "--innercap",
+    "532",
+    "--output",
+    "results\\stage45a_validation\\pores_3_cpu_fixed_p.jsonl",
+    "--P",
+    "results\\stage45a_validation\\pores_3_cpu_native_P.mtx"
+  ]
+}

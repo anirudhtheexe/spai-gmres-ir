@@ -1,0 +1,58 @@
+{
+  "classification": "solver_success",
+  "substatus": "success",
+  "phase": "solve",
+  "backend": "cpu_native",
+  "construction_assessment": {
+    "status": "success",
+    "qr_fits": 16,
+    "qr_unchecked_fits": 5939,
+    "maximum_scaled_QR_coefficient_difference": "1.7214342084942358232725970097431890154738416591459909881763099654968800896457988E-15",
+    "maximum_full_column_residual": "0.29991032270787763137261870687539992284876109149549985420599143644145884863156081",
+    "frobenius_BN_minus_I": "9.7205181082294935110659318691926865005844830741972366995346041087906731451831249",
+    "frobenius_I_minus_PA": "9.7205181082294934378802173564993583055546035106550761200760239892467353667861523",
+    "sampled_columns": [
+      0,
+      504,
+      1644,
+      1656,
+      1782,
+      3311
+    ]
+  },
+  "terminal_Decimal_diagnostics": {
+    "inf": "1.84980288209926052217216568006139364806408033338437028186840294110E-13",
+    "norm2": "4.6149791519355269845427129124219686187824011441570616486175276691146359257219261E-13",
+    "nbe": "2.3178771861747326575062781331032587263173080264095934620582364897047509180155486E-17",
+    "cbe": "1.6768587243695476175830720621301060074140747535990814189913592332666035168079981E-16",
+    "nbe_allowance": "1.9865007665189186015783357108747052166401509099147937804172220318488398633323675E-15"
+  },
+  "terminal_boundary_uncertain": false,
+  "checks": 241404,
+  "failures": [],
+  "validation_outcome": "pass",
+  "name": "sherman5",
+  "raw_record": "results\\stage45a_extension\\sherman5_cpu_native.jsonl",
+  "command": [
+    "C:\\Users\\Anirudh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "scripts/untimed_screen.py",
+    "--runner",
+    "build/validation-cuda/untimed_screen.exe",
+    "--matrix",
+    "data\\stage45a_provenance_20261011\\sherman5\\sherman5.mtx",
+    "--provenance",
+    "data\\stage45a_provenance_20261011\\MANIFEST.json",
+    "--backend",
+    "cpu_native",
+    "--rhs",
+    "equal_unit2",
+    "--alpha",
+    "414",
+    "--innercap",
+    "3312",
+    "--outercap",
+    "20",
+    "--output",
+    "results\\stage45a_extension\\sherman5_cpu_native.jsonl"
+  ]
+}

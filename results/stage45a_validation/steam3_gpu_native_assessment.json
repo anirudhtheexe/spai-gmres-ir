@@ -1,0 +1,52 @@
+{
+  "classification": "solver_success",
+  "substatus": "success",
+  "phase": "solve",
+  "backend": "gpu_native",
+  "construction_assessment": {
+    "status": "success",
+    "qr_fits": 19,
+    "qr_unchecked_fits": 145,
+    "maximum_scaled_QR_coefficient_difference": "3.8804001094408400743064033497057193024079615314415394687793222494190735525252514E-13",
+    "maximum_full_column_residual": "0.27996277913288761487745717932592051900738552266862255178219702928132910553228214",
+    "frobenius_I_minus_PA": "0.57735681790342611277624329676580388206356585198311096758728004713391973568582072",
+    "sampled_columns": [
+      0,
+      3,
+      7,
+      40,
+      79
+    ]
+  },
+  "terminal_Decimal_diagnostics": {
+    "inf": "3.907132140292092789782610179466331967918964371515218656789254531198907202E-7",
+    "norm2": "9.1266293509402905123274701558034067271772503440005322260208323680092576623516770E-7",
+    "nbe": "1.0407025710661559491086047967394667988587301734638135643577158857737823202644369E-16",
+    "cbe": "4.1027781924498786290883926272777140210273346354024120822416858896192329841895967E-8",
+    "nbe_allowance": "9.3422432906124901202364361875202742795029672681178207965247279986962758352395896E-23"
+  },
+  "terminal_boundary_uncertain": false,
+  "checks": 2933,
+  "failures": [],
+  "validation_outcome": "pass",
+  "name": "steam3",
+  "raw_record": "results\\stage45a_validation\\steam3_gpu_native.jsonl",
+  "command": [
+    "C:\\Users\\Anirudh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "scripts/untimed_screen.py",
+    "--runner",
+    "build/validation-cuda/untimed_screen.exe",
+    "--matrix",
+    "data\\stage45a_provenance_20261011\\steam3\\steam3.mtx",
+    "--provenance",
+    "data\\stage45a_provenance_20261011\\MANIFEST.json",
+    "--backend",
+    "gpu_native",
+    "--alpha",
+    "10",
+    "--innercap",
+    "80",
+    "--output",
+    "results\\stage45a_validation\\steam3_gpu_native.jsonl"
+  ]
+}

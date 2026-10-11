@@ -1,0 +1,53 @@
+{
+  "classification": "solver_success",
+  "substatus": "success",
+  "phase": "solve",
+  "backend": "gpu_native",
+  "construction_assessment": {
+    "status": "success",
+    "qr_fits": 13,
+    "qr_unchecked_fits": 6161,
+    "maximum_scaled_QR_coefficient_difference": "1.6998915284027766193691994527106310640063616746533528559271982248746618362522992E-14",
+    "maximum_full_column_residual": "0.27594400654080782703414764877639796946409778458152293313191338746343250546182499",
+    "frobenius_BN_minus_I": "11.447707886175219917954039540365378336198113879368690455961182747873198539267158",
+    "frobenius_I_minus_PA": "11.447707886175200552992980418123093564844447416321812870291197829857832267079521",
+    "sampled_columns": [
+      0,
+      440,
+      987,
+      1102,
+      2204
+    ]
+  },
+  "terminal_Decimal_diagnostics": {
+    "inf": "3.0289859631222810622841990462352055268475586024681120108671683600E-14",
+    "norm2": "3.3274254369722230398007809958788088931340226253173253148757056782673226502873656E-13",
+    "nbe": "2.0402971760578484680980311931103104846564927790291296458778961870559968446594266E-16",
+    "cbe": "2.0639458015459774305726055400431823278550540406976937554066959929872408310901668E-16",
+    "nbe_allowance": "7.1041932166953894143479905069532956587249959311996741714165750831254879034954906E-15"
+  },
+  "terminal_boundary_uncertain": false,
+  "checks": 178908,
+  "failures": [],
+  "validation_outcome": "pass",
+  "name": "orsreg_1",
+  "raw_record": "results\\stage45a_validation\\orsreg_1_gpu_native.jsonl",
+  "command": [
+    "C:\\Users\\Anirudh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "scripts/untimed_screen.py",
+    "--runner",
+    "build/validation-cuda/untimed_screen.exe",
+    "--matrix",
+    "data\\stage45a_provenance_20261011\\orsreg_1\\orsreg_1.mtx",
+    "--provenance",
+    "data\\stage45a_provenance_20261011\\MANIFEST.json",
+    "--backend",
+    "gpu_native",
+    "--alpha",
+    "276",
+    "--innercap",
+    "2205",
+    "--output",
+    "results\\stage45a_validation\\orsreg_1_gpu_native.jsonl"
+  ]
+}

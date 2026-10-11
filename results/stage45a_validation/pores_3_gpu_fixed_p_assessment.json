@@ -1,0 +1,39 @@
+{
+  "classification": "solver_success",
+  "substatus": "success",
+  "phase": "solve",
+  "backend": "gpu_fixed_p",
+  "terminal_Decimal_diagnostics": {
+    "inf": "4.1688761547414446429472291858039410257443938164416245589951318849E-12",
+    "norm2": "1.0352758718237423302378825495972580780422974897136532165717275526529016068800672E-11",
+    "nbe": "8.2716545431377422012829947156271517540422261170693391309914351493378670724607678E-17",
+    "cbe": "1.4772631800729059621247136897482615191927038927426235674841217035866342915243059E-16",
+    "nbe_allowance": "5.5470521616340796245512146265603811685081151020027760650018073619514995232892674E-15"
+  },
+  "terminal_boundary_uncertain": false,
+  "checks": 1742,
+  "failures": [],
+  "validation_outcome": "pass",
+  "name": "pores_3",
+  "raw_record": "results\\stage45a_validation\\pores_3_gpu_fixed_p.jsonl",
+  "command": [
+    "C:\\Users\\Anirudh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "scripts/untimed_screen.py",
+    "--runner",
+    "build/validation-cuda/untimed_screen.exe",
+    "--matrix",
+    "data\\stage45a_provenance_20261011\\pores_3\\pores_3.mtx",
+    "--provenance",
+    "data\\stage45a_provenance_20261011\\MANIFEST.json",
+    "--backend",
+    "gpu_fixed_p",
+    "--alpha",
+    "67",
+    "--innercap",
+    "532",
+    "--output",
+    "results\\stage45a_validation\\pores_3_gpu_fixed_p.jsonl",
+    "--P",
+    "results\\stage45a_validation\\pores_3_cpu_native_P.mtx"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "classification": "solver_success",
+  "substatus": "success",
+  "phase": "solve",
+  "backend": "cpu_native",
+  "manufactured_reference_original_residual_inf": "0.000000",
+  "construction_assessment": {
+    "status": "success",
+    "qr_fits": 497,
+    "qr_unchecked_fits": 0,
+    "maximum_scaled_QR_coefficient_difference": "6.8027282650548970149020127510913026848611633234127238950229995226E-16",
+    "maximum_full_column_residual": "0.29217435489538876228167895083379666755831961675258134804681042042853963840217696",
+    "frobenius_BN_minus_I": "3.3675783450898592544230046646430882781758437260275599456299634155067001810002283",
+    "frobenius_I_minus_PA": "3.3675783450898593518905700341337389309946182416868364795978389321124222570307024",
+    "sampled_columns": [
+      0,
+      1,
+      17,
+      33,
+      128,
+      255
+    ]
+  },
+  "terminal_Decimal_diagnostics": {
+    "inf": "2.879640970121499776723794639110565185546875E-16",
+    "norm2": "1.1920813047293666697768253768051638590878589853770485286181659422669137930122958E-15",
+    "nbe": "8.9464573829017454133656025201142013477429711949468899207428439717781500390007498E-17",
+    "cbe": "1.6794496758988161628120848826540927801172015820484904916148211520142292880038021E-16",
+    "nbe_allowance": "6.6915189678378368309780900214352661489064401778349879060286834681036464949800735E-15"
+  },
+  "terminal_boundary_uncertain": false,
+  "manufactured_forward_error": "2.9605947323337507744630177815755208333333333333333333333333333333333333333333333E-16",
+  "checks": 9631,
+  "failures": [],
+  "validation_outcome": "pass",
+  "name": "stencil_256",
+  "raw_record": "results\\stage45a_extension\\stencil_256_cpu_native.jsonl",
+  "command": [
+    "C:\\Users\\Anirudh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "scripts/untimed_screen.py",
+    "--runner",
+    "build/validation-cuda/untimed_screen.exe",
+    "--matrix",
+    "data\\stage45a_synthetic_v1\\stencil_256.mtx",
+    "--provenance",
+    "data\\stage45a_synthetic_v1\\stencil_256.provenance.json",
+    "--backend",
+    "cpu_native",
+    "--rhs",
+    "periodic7",
+    "--alpha",
+    "32",
+    "--innercap",
+    "256",
+    "--outercap",
+    "20",
+    "--output",
+    "results\\stage45a_extension\\stencil_256_cpu_native.jsonl"
+  ]
+}

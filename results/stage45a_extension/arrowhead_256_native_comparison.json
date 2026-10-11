@@ -1,0 +1,21 @@
+{
+  "cpu_status": "success",
+  "gpu_status": "success",
+  "same_original_A_b": true,
+  "cpu_P_nnz": 256,
+  "gpu_P_nnz": 256,
+  "different_final_pattern_or_status_columns": [],
+  "first_selected_order_difference": null,
+  "first_selected_set_or_pattern_difference": null,
+  "cpu_outer_steps": 2,
+  "gpu_outer_steps": 2,
+  "cpu_inner_iterations": [
+    11,
+    12
+  ],
+  "gpu_inner_iterations": [
+    11,
+    12
+  ],
+  "solution_infinity_difference": 2.220446049250313e-16
+}

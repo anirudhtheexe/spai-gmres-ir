@@ -1,0 +1,60 @@
+{
+  "classification": "solver_success",
+  "substatus": "success",
+  "phase": "solve",
+  "backend": "cpu_native",
+  "manufactured_reference_original_residual_inf": "0.000000",
+  "construction_assessment": {
+    "status": "success",
+    "qr_fits": 1143,
+    "qr_unchecked_fits": 0,
+    "maximum_scaled_QR_coefficient_difference": "1.28955736749193679864829697415836341866904384465528934350376770582E-15",
+    "maximum_full_column_residual": "0.29230641110773389610415769347390314465610121823504997879920777721682530432158065",
+    "frobenius_BN_minus_I": "8.0798810427396393870575909108956851302032498836185781322282777969762327391782858",
+    "frobenius_I_minus_PA": "8.0798810427396396075457804065068300959856761809764935682944110465130982861801375",
+    "sampled_columns": [
+      0,
+      57,
+      150,
+      301,
+      512,
+      1023
+    ]
+  },
+  "terminal_Decimal_diagnostics": {
+    "inf": "4.201890577222749729622511966065090405209048185497522354125976562E-16",
+    "norm2": "1.9893654710453206415742828573809140159652928135162644605209963535880684585251929E-15",
+    "nbe": "1.2991352509287725455342937172440739491122782353143162157129175984664938891969332E-16",
+    "cbe": "1.6043852550275149665852900973783322166963992968513659445227935595441334025178082E-16",
+    "nbe_allowance": "6.3845869010327835804725269866821993309094997686925178697240671578480882434858487E-15"
+  },
+  "terminal_boundary_uncertain": false,
+  "manufactured_forward_error": "4.44089209850062616169452667236328125E-16",
+  "checks": 18250,
+  "failures": [],
+  "validation_outcome": "pass",
+  "name": "irregular_1024",
+  "raw_record": "results\\stage45a_extension\\irregular_1024_cpu_native.jsonl",
+  "command": [
+    "C:\\Users\\Anirudh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "scripts/untimed_screen.py",
+    "--runner",
+    "build/validation-cuda/untimed_screen.exe",
+    "--matrix",
+    "data\\stage45a_synthetic_v1\\irregular_1024.mtx",
+    "--provenance",
+    "data\\stage45a_synthetic_v1\\irregular_1024.provenance.json",
+    "--backend",
+    "cpu_native",
+    "--rhs",
+    "periodic7",
+    "--alpha",
+    "128",
+    "--innercap",
+    "1024",
+    "--outercap",
+    "20",
+    "--output",
+    "results\\stage45a_extension\\irregular_1024_cpu_native.jsonl"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "classification": "solver_success",
+  "substatus": "success",
+  "phase": "solve",
+  "backend": "gpu_fixed_p",
+  "terminal_Decimal_diagnostics": {
+    "inf": "2.2037408696184348627638190357471736191376152040368168339573573533E-17",
+    "norm2": "7.8358468553060613608212067813345434721798069601142679132639269307087211881882266E-17",
+    "nbe": "4.1971338440469500303258225392075815477896767111701368447718388802201210182854728E-17",
+    "cbe": "1.1816244002950565956306410559183338774204175813660336019207100729517565824884108E-16",
+    "nbe_allowance": "3.4429594603944644158773522552386704506523618727782711025806515060555808724406918E-15"
+  },
+  "terminal_boundary_uncertain": false,
+  "checks": 414,
+  "failures": [],
+  "validation_outcome": "pass",
+  "name": "gre_115",
+  "raw_record": "results\\stage45a_validation\\gre_115_gpu_fixed_p.jsonl",
+  "command": [
+    "C:\\Users\\Anirudh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "scripts/untimed_screen.py",
+    "--runner",
+    "build/validation-cuda/untimed_screen.exe",
+    "--matrix",
+    "data\\stage45a_provenance_20261011\\gre_115\\gre_115.mtx",
+    "--provenance",
+    "data\\stage45a_provenance_20261011\\MANIFEST.json",
+    "--backend",
+    "gpu_fixed_p",
+    "--alpha",
+    "15",
+    "--innercap",
+    "115",
+    "--output",
+    "results\\stage45a_validation\\gre_115_gpu_fixed_p.jsonl",
+    "--P",
+    "results\\stage45a_validation\\gre_115_cpu_native_P.mtx"
+  ]
+}

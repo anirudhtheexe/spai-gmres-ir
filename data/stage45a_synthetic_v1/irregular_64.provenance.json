@@ -1,0 +1,27 @@
+{
+  "id": "irregular_64",
+  "family": "irregular",
+  "n": 64,
+  "source_id": "controlled/irregular_64",
+  "source_url": null,
+  "license_url": null,
+  "acquired_at": null,
+  "raw_path": "irregular_64.mtx",
+  "raw_sha256": "4d901af788659ed54cea5426110c4b8c042338e82ab8000f01fcecd0d9f0bdde",
+  "raw_bytes": 4039,
+  "generator": "stage45a-dyadic-v1",
+  "generator_sha256": "60ed9bae188f8067ccc45aee82b2f53bc45bed7302722a067a6e99ac20ce05fd",
+  "generator_method": "blocks3,5,8,13 repeated; shifts1..min(width-1,1+i%5), weights -(1+(i+shift)%4)/16; cross-edge(i+width+1)%n weight-1/16",
+  "diagonal_method": "every row sum(abs(offdiagonal)) + 1/2; strictly row diagonally dominant",
+  "rhs_method": "periodic7",
+  "reference_method": "periodic7 dyadic manufactured diagnostic",
+  "options": {
+    "epsilon": 0.3,
+    "alpha": 8,
+    "beta": 8,
+    "tau": 1e-08,
+    "innercap": 64,
+    "outercap": 20,
+    "backward_tolerance": 1.1102230246251565e-15
+  }
+}

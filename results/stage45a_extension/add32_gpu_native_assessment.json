@@ -1,0 +1,58 @@
+{
+  "classification": "solver_success",
+  "substatus": "success",
+  "phase": "solve",
+  "backend": "gpu_native",
+  "construction_assessment": {
+    "status": "success",
+    "qr_fits": 17,
+    "qr_unchecked_fits": 10523,
+    "maximum_scaled_QR_coefficient_difference": "2.019180751925429496914697402019349625274957125236477644905132578003776E-15",
+    "maximum_full_column_residual": "0.29875782118163474124188353875768395732186426704746147130853854459761374063349753",
+    "frobenius_BN_minus_I": "8.4302076818570837712051474703028719317738059589985341601051511698626489654154071",
+    "frobenius_I_minus_PA": "8.4302076818570833189004665989521350831972381168151680360677034204174026880207955",
+    "sampled_columns": [
+      0,
+      781,
+      1038,
+      2480,
+      4850,
+      4959
+    ]
+  },
+  "terminal_Decimal_diagnostics": {
+    "inf": "2.2175256486478922688992558279621295195141740508835981326996034116E-16",
+    "norm2": "1.7066851964360799842459528809867376163191555288003498404350616673582844953799556E-15",
+    "nbe": "7.3445040802718261378859316463771593212507005696000468319458091480392220836974285E-17",
+    "cbe": "1.8482870925073562615252772997695272104587621568224348281763687669403322583321465E-16",
+    "nbe_allowance": "5.6308374961086499943579335901122101234870149143110165075101993373205062604771882E-15"
+  },
+  "terminal_boundary_uncertain": false,
+  "checks": 197094,
+  "failures": [],
+  "validation_outcome": "pass",
+  "name": "add32",
+  "raw_record": "results\\stage45a_extension\\add32_gpu_native.jsonl",
+  "command": [
+    "C:\\Users\\Anirudh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "scripts/untimed_screen.py",
+    "--runner",
+    "build/validation-cuda/untimed_screen.exe",
+    "--matrix",
+    "data\\stage45a_provenance_20261011\\add32\\add32.mtx",
+    "--provenance",
+    "data\\stage45a_provenance_20261011\\MANIFEST.json",
+    "--backend",
+    "gpu_native",
+    "--rhs",
+    "equal_unit2",
+    "--alpha",
+    "620",
+    "--innercap",
+    "4960",
+    "--outercap",
+    "20",
+    "--output",
+    "results\\stage45a_extension\\add32_gpu_native.jsonl"
+  ]
+}

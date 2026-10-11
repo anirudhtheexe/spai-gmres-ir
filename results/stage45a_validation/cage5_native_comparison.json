@@ -1,0 +1,44 @@
+{
+  "cpu_status": "success",
+  "gpu_status": "success",
+  "same_original_A_b": true,
+  "cpu_P_nnz": 213,
+  "gpu_P_nnz": 213,
+  "different_final_pattern_or_status_columns": [],
+  "first_selected_order_difference": {
+    "column": 10,
+    "fit": 0,
+    "cpu_selected": [
+      36,
+      15,
+      26,
+      34,
+      11,
+      24,
+      2,
+      3
+    ],
+    "gpu_selected": [
+      15,
+      36,
+      26,
+      34,
+      11,
+      24,
+      2,
+      3
+    ]
+  },
+  "first_selected_set_or_pattern_difference": null,
+  "cpu_outer_steps": 2,
+  "gpu_outer_steps": 2,
+  "cpu_inner_iterations": [
+    11,
+    12
+  ],
+  "gpu_inner_iterations": [
+    11,
+    12
+  ],
+  "solution_infinity_difference": 2.220446049250313e-16
+}

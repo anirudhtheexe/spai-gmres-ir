@@ -1,0 +1,58 @@
+{
+  "classification": "solver_success",
+  "substatus": "success",
+  "phase": "solve",
+  "backend": "cpu_native",
+  "construction_assessment": {
+    "status": "success",
+    "qr_fits": 17,
+    "qr_unchecked_fits": 10515,
+    "maximum_scaled_QR_coefficient_difference": "6.15798946265720037323406084169736613621326799691159793343386242526E-15",
+    "maximum_full_column_residual": "0.29875782118163474124188353875636895493133880880613753573560201743538275045115581",
+    "frobenius_BN_minus_I": "8.4364316613668413485236766084010939397869347711140179471311556637760634880133248",
+    "frobenius_I_minus_PA": "8.4364316613668408956030301455010134779069968060498415391724934935360304475257161",
+    "sampled_columns": [
+      0,
+      781,
+      1410,
+      2480,
+      4850,
+      4959
+    ]
+  },
+  "terminal_Decimal_diagnostics": {
+    "inf": "2.5238075243860653060315023129937560207528848735974004872440780435E-16",
+    "norm2": "1.7050177841170734364021081201840673655595372314922829057463047501050597996884346E-15",
+    "nbe": "8.3589178199478133207867781117406008011842242771550933426102082169321592698723871E-17",
+    "cbe": "2.2858900223042591453653819197044346130663772319291732480931626890347981962551483E-16",
+    "nbe_allowance": "5.6308374961086500559514248280235729702706162694616798100461551826542941310407947E-15"
+  },
+  "terminal_boundary_uncertain": false,
+  "checks": 196846,
+  "failures": [],
+  "validation_outcome": "pass",
+  "name": "add32",
+  "raw_record": "results\\stage45a_extension\\add32_cpu_native.jsonl",
+  "command": [
+    "C:\\Users\\Anirudh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "scripts/untimed_screen.py",
+    "--runner",
+    "build/validation-cuda/untimed_screen.exe",
+    "--matrix",
+    "data\\stage45a_provenance_20261011\\add32\\add32.mtx",
+    "--provenance",
+    "data\\stage45a_provenance_20261011\\MANIFEST.json",
+    "--backend",
+    "cpu_native",
+    "--rhs",
+    "equal_unit2",
+    "--alpha",
+    "620",
+    "--innercap",
+    "4960",
+    "--outercap",
+    "20",
+    "--output",
+    "results\\stage45a_extension\\add32_cpu_native.jsonl"
+  ]
+}

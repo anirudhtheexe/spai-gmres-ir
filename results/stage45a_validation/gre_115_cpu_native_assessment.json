@@ -1,0 +1,53 @@
+{
+  "classification": "solver_success",
+  "substatus": "success",
+  "phase": "solve",
+  "backend": "cpu_native",
+  "construction_assessment": {
+    "status": "success",
+    "qr_fits": 24,
+    "qr_unchecked_fits": 358,
+    "maximum_scaled_QR_coefficient_difference": "9.5762778711831529604813939890861457123783187152415418703993511070852782485077857E-16",
+    "maximum_full_column_residual": "0.29880498181485515395396218209937115711099912227650183219203962443132679277769757",
+    "frobenius_I_minus_PA": "2.6144976579804644428372658067838754537081386954536754590314906422269058352558456",
+    "sampled_columns": [
+      0,
+      3,
+      57,
+      59,
+      82,
+      114
+    ]
+  },
+  "terminal_Decimal_diagnostics": {
+    "inf": "1.8896709195174360701799934097115580008702870639704114036350190986E-17",
+    "norm2": "8.0673997938874007675134173833619025362975366446216130996800015975524801279975508E-17",
+    "nbe": "3.5989720387548070570627714394197147387617658266600307352023812642704726714239098E-17",
+    "cbe": "9.0553938010243532172551133707751562797815427917398119656282618074675550065111496E-17",
+    "nbe_allowance": "3.4429594603944640393080312586319088471490634476378928371884673397489937277621290E-15"
+  },
+  "terminal_boundary_uncertain": false,
+  "checks": 13216,
+  "failures": [],
+  "validation_outcome": "pass",
+  "name": "gre_115",
+  "raw_record": "results\\stage45a_validation\\gre_115_cpu_native.jsonl",
+  "command": [
+    "C:\\Users\\Anirudh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "scripts/untimed_screen.py",
+    "--runner",
+    "build/validation-cuda/untimed_screen.exe",
+    "--matrix",
+    "data\\stage45a_provenance_20261011\\gre_115\\gre_115.mtx",
+    "--provenance",
+    "data\\stage45a_provenance_20261011\\MANIFEST.json",
+    "--backend",
+    "cpu_native",
+    "--alpha",
+    "15",
+    "--innercap",
+    "115",
+    "--output",
+    "results\\stage45a_validation\\gre_115_cpu_native.jsonl"
+  ]
+}

@@ -41,7 +41,9 @@ int main(int argc,char** argv){
             <<" arnoldi_downloads="<<out.total_transfers.arnoldi_vector_downloads<<" scalar_observations="<<out.total_transfers.scalar_observations<<"\n";
         if(result.construction_performed)std::cout<<"spai_status="<<bspai::spai_status_name(result.construction.status)<<" nnz_P="<<result.construction.preconditioner.values().size()<<"\n";
         if(out.gpu_construction_performed){const auto& t=out.gpu_spai_telemetry;std::cout<<"construction_streams="<<t.streams_created<<" max_fit_batch="<<t.max_fit_batch<<" parallel_fit_batches="<<t.parallel_fit_batches
-            <<" qr_submissions="<<t.qr_submissions<<" max_qr_before_collection="<<t.max_qr_submissions_before_collection<<" construction_uploads="<<t.uploads<<" construction_downloads="<<t.downloads<<"\n";}
+            <<" qr_submissions="<<t.qr_submissions<<" max_qr_before_collection="<<t.max_qr_submissions_before_collection<<" construction_uploads="<<t.uploads<<" construction_downloads="<<t.downloads<<"\n";
+            std::cout<<"construction_peak_device_bytes="<<t.peak_device_bytes<<" max_allocation_bytes="<<t.max_single_allocation_bytes<<" sparse_B_bytes="<<t.sparse_b_bytes<<" packed_output_bytes="<<t.packed_output_bytes
+                <<" max_reduced_elements="<<t.max_reduced_elements<<" max_QR_workspace_bytes="<<t.max_qr_workspace_bytes<<" outstanding_device_allocations="<<t.outstanding_device_allocations<<"\n";}
         for(const auto& h:result.history){
             std::cout<<"outer="<<h.step<<" residual_inf="<<h.diagnostics.residual_inf<<" residual_2="<<h.diagnostics.residual_2
                 <<" eta_n="<<h.diagnostics.normwise_backward_error<<" eta_c="<<h.diagnostics.componentwise_backward_error<<"\n";

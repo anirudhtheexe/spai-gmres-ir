@@ -1,0 +1,58 @@
+{
+  "classification": "solver_success",
+  "substatus": "success",
+  "phase": "solve",
+  "backend": "gpu_native",
+  "construction_assessment": {
+    "status": "success",
+    "qr_fits": 16,
+    "qr_unchecked_fits": 5939,
+    "maximum_scaled_QR_coefficient_difference": "8.6654586840387579170768371354573872025235342927898156415076802790468598030424152E-16",
+    "maximum_full_column_residual": "0.29991032270787763137261870686905486754864086625976172215626410820005657711390587",
+    "frobenius_BN_minus_I": "9.7205157291777300328493974169928403385971657493204631137096710287765197421332373",
+    "frobenius_I_minus_PA": "9.7205157291777299596640985132975560745533035606464493117791491760128726297379774",
+    "sampled_columns": [
+      0,
+      504,
+      1644,
+      1656,
+      1782,
+      3311
+    ]
+  },
+  "terminal_Decimal_diagnostics": {
+    "inf": "8.0316243770827493095844691353968926076792158065551096462510172185E-14",
+    "norm2": "4.0583996657291101666361292147820254961535689627142175890498233145874381745237179E-13",
+    "nbe": "1.0063947403108256674355579693594462393089167982277362910546206653826572161630079E-17",
+    "cbe": "1.6681057735592280486943118120806935793535070845708318760618575482115985924344281E-16",
+    "nbe_allowance": "1.9865007665189198311891239208261006085726015527885275075737748873897072161217227E-15"
+  },
+  "terminal_boundary_uncertain": false,
+  "checks": 241407,
+  "failures": [],
+  "validation_outcome": "pass",
+  "name": "sherman5",
+  "raw_record": "results\\stage45a_extension\\sherman5_gpu_native.jsonl",
+  "command": [
+    "C:\\Users\\Anirudh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "scripts/untimed_screen.py",
+    "--runner",
+    "build/validation-cuda/untimed_screen.exe",
+    "--matrix",
+    "data\\stage45a_provenance_20261011\\sherman5\\sherman5.mtx",
+    "--provenance",
+    "data\\stage45a_provenance_20261011\\MANIFEST.json",
+    "--backend",
+    "gpu_native",
+    "--rhs",
+    "equal_unit2",
+    "--alpha",
+    "414",
+    "--innercap",
+    "3312",
+    "--outercap",
+    "20",
+    "--output",
+    "results\\stage45a_extension\\sherman5_gpu_native.jsonl"
+  ]
+}

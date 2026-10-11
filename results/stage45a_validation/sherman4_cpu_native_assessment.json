@@ -1,0 +1,53 @@
+{
+  "classification": "solver_success",
+  "substatus": "success",
+  "phase": "solve",
+  "backend": "cpu_native",
+  "construction_assessment": {
+    "status": "success",
+    "qr_fits": 17,
+    "qr_unchecked_fits": 2153,
+    "maximum_scaled_QR_coefficient_difference": "1.8197287875361701042040443951054512053015468447618740838531755460185170436230100E-15",
+    "maximum_full_column_residual": "0.29834769326517271266887616690352967482062965259372588543951907768293874229567983",
+    "frobenius_I_minus_PA": "5.4291711599233085458142323927413873080353475320316502142216610002692268389697767",
+    "sampled_columns": [
+      0,
+      86,
+      552,
+      641,
+      1091,
+      1103
+    ]
+  },
+  "terminal_Decimal_diagnostics": {
+    "inf": "4.9924004767300139148469248278511073393551533651166240979080157561E-15",
+    "norm2": "3.1229208678638256912539523621049743073776394920375899435568814696688717599480824E-14",
+    "nbe": "5.3633862001447670056276310906029548493593505829151984167955934904891906244287404E-17",
+    "cbe": "1.5846007479208159057917812806071535815060182137987809766234942874782454106204369E-16",
+    "nbe_allowance": "4.8336751991786951284639697957885772692289399855129654713156658278067341412435056E-15"
+  },
+  "terminal_boundary_uncertain": false,
+  "checks": 55863,
+  "failures": [],
+  "validation_outcome": "pass",
+  "name": "sherman4",
+  "raw_record": "results\\stage45a_validation\\sherman4_cpu_native.jsonl",
+  "command": [
+    "C:\\Users\\Anirudh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "scripts/untimed_screen.py",
+    "--runner",
+    "build/validation-cuda/untimed_screen.exe",
+    "--matrix",
+    "data\\stage45a_provenance_20261011\\sherman4\\sherman4.mtx",
+    "--provenance",
+    "data\\stage45a_provenance_20261011\\MANIFEST.json",
+    "--backend",
+    "cpu_native",
+    "--alpha",
+    "138",
+    "--innercap",
+    "1104",
+    "--output",
+    "results\\stage45a_validation\\sherman4_cpu_native.jsonl"
+  ]
+}

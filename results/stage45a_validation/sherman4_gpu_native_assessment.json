@@ -1,0 +1,53 @@
+{
+  "classification": "solver_success",
+  "substatus": "success",
+  "phase": "solve",
+  "backend": "gpu_native",
+  "construction_assessment": {
+    "status": "success",
+    "qr_fits": 17,
+    "qr_unchecked_fits": 2153,
+    "maximum_scaled_QR_coefficient_difference": "1.2134302785433524443899779135571785219562010719157405171794214134544080530024888E-15",
+    "maximum_full_column_residual": "0.29834769326517271266887616690380510368124951332629972032495138574887307926997936",
+    "frobenius_I_minus_PA": "5.4291711599233085458142323927269823539396259524683849457468955205289197745725911",
+    "sampled_columns": [
+      0,
+      86,
+      552,
+      641,
+      1091,
+      1103
+    ]
+  },
+  "terminal_Decimal_diagnostics": {
+    "inf": "5.5995059990482027122931425635718369430666259325274358715773814766E-15",
+    "norm2": "3.2321020485356245569393438097707892617094429859297441468179758231580255993246271E-14",
+    "nbe": "6.0156057878180933276069777434344227116197610389185476906751952567909338207742625E-17",
+    "cbe": "1.4113141864943063914272785852540385488422326042923151662325766643285736046316976E-16",
+    "nbe_allowance": "4.8336751991786930109592103995207252943996776751095589267886943289739151155411822E-15"
+  },
+  "terminal_boundary_uncertain": false,
+  "checks": 55866,
+  "failures": [],
+  "validation_outcome": "pass",
+  "name": "sherman4",
+  "raw_record": "results\\stage45a_validation\\sherman4_gpu_native.jsonl",
+  "command": [
+    "C:\\Users\\Anirudh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "scripts/untimed_screen.py",
+    "--runner",
+    "build/validation-cuda/untimed_screen.exe",
+    "--matrix",
+    "data\\stage45a_provenance_20261011\\sherman4\\sherman4.mtx",
+    "--provenance",
+    "data\\stage45a_provenance_20261011\\MANIFEST.json",
+    "--backend",
+    "gpu_native",
+    "--alpha",
+    "138",
+    "--innercap",
+    "1104",
+    "--output",
+    "results\\stage45a_validation\\sherman4_gpu_native.jsonl"
+  ]
+}

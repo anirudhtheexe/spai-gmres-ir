@@ -1,0 +1,39 @@
+{
+  "classification": "solver_success",
+  "substatus": "success",
+  "phase": "solve",
+  "backend": "cpu_fixed_p",
+  "terminal_Decimal_diagnostics": {
+    "inf": "7.42958786244509510065041788553288708361982924074405375453240986694E-15",
+    "norm2": "9.2902293894301096092307631578802243314088297490307212952106955406923740931922397E-15",
+    "nbe": "3.6977985981735933374300096178864076047817682606339480439443588640809298121491866E-21",
+    "cbe": "2.2991829946223854003713689983717499010737318431955445779254633010937232981113242E-16",
+    "nbe_allowance": "3.8575673002971540640033506988340864876011810878927059211840166791109982322639021E-19"
+  },
+  "terminal_boundary_uncertain": false,
+  "checks": 766,
+  "failures": [],
+  "validation_outcome": "pass",
+  "name": "steam1",
+  "raw_record": "results\\stage45a_validation\\steam1_cpu_fixed_p.jsonl",
+  "command": [
+    "C:\\Users\\Anirudh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "scripts/untimed_screen.py",
+    "--runner",
+    "build/validation-cuda/untimed_screen.exe",
+    "--matrix",
+    "data\\stage45a_provenance_20261011\\steam1\\steam1.mtx",
+    "--provenance",
+    "data\\stage45a_provenance_20261011\\MANIFEST.json",
+    "--backend",
+    "cpu_fixed_p",
+    "--alpha",
+    "30",
+    "--innercap",
+    "240",
+    "--output",
+    "results\\stage45a_validation\\steam1_cpu_fixed_p.jsonl",
+    "--P",
+    "results\\stage45a_validation\\steam1_cpu_native_P.mtx"
+  ]
+}

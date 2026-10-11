@@ -1,0 +1,28 @@
+{
+  "id": "arrowhead_256",
+  "family": "arrowhead",
+  "n": 256,
+  "long_row_degree": 32,
+  "source_id": "controlled/arrowhead_256",
+  "source_url": null,
+  "license_url": null,
+  "acquired_at": null,
+  "raw_path": "arrowhead_256.mtx",
+  "raw_sha256": "490b0d62cdf163b8120bfa30d48b4a935e852b389668c014e4fb2b5a9bf0ddfa",
+  "raw_bytes": 12046,
+  "generator": "stage45a-dyadic-v1",
+  "generator_sha256": "60ed9bae188f8067ccc45aee82b2f53bc45bed7302722a067a6e99ac20ce05fd",
+  "generator_method": "hub columns1+floor(k*(n-1)/degree), weight-(1+k%4)/32; reverse-(1+k%3)/16; chainlower-1/8 upper-1/16",
+  "diagonal_method": "every row sum(abs(offdiagonal)) + 1/2; strictly row diagonally dominant",
+  "rhs_method": "periodic7",
+  "reference_method": "periodic7 dyadic manufactured diagnostic",
+  "options": {
+    "epsilon": 0.3,
+    "alpha": 32,
+    "beta": 8,
+    "tau": 1e-08,
+    "innercap": 256,
+    "outercap": 20,
+    "backward_tolerance": 1.1102230246251565e-15
+  }
+}

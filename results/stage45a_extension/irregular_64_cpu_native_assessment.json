@@ -1,0 +1,60 @@
+{
+  "classification": "solver_success",
+  "substatus": "success",
+  "phase": "solve",
+  "backend": "cpu_native",
+  "manufactured_reference_original_residual_inf": "0.000000",
+  "construction_assessment": {
+    "status": "success",
+    "qr_fits": 72,
+    "qr_unchecked_fits": 0,
+    "maximum_scaled_QR_coefficient_difference": "9.4030638790985926462603124369828221176570845215204212175958723400E-16",
+    "maximum_full_column_residual": "0.29230641110773389610415769347387405967393629467857258230967269123612522552178366",
+    "frobenius_BN_minus_I": "2.0171712114263985199967553945023418490747043065430576986666715050623433336606236",
+    "frobenius_I_minus_PA": "2.0171712114263985762871159263137168693037900677481637391656460022521774835690342",
+    "sampled_columns": [
+      0,
+      1,
+      10,
+      17,
+      32,
+      63
+    ]
+  },
+  "terminal_Decimal_diagnostics": {
+    "inf": "1.4418373145684546929890837397517794338241969853697810322046279907E-16",
+    "norm2": "4.2941853930355185710775638288851085323481440048286099323155125649401765944662576E-16",
+    "nbe": "4.7565767078546954806387974521123339958565230933046711163730147501208991953831214E-17",
+    "cbe": "8.5217288068485176594332831632467555817787260016053200978118835552688398815601386E-17",
+    "nbe_allowance": "5.8601462743101041937196759250922256401448253888819543727819907989956069361716510E-15"
+  },
+  "terminal_boundary_uncertain": false,
+  "manufactured_forward_error": "1.4802973661668753872315088907877604166666666666666666666666666666666666666666667E-16",
+  "checks": 1223,
+  "failures": [],
+  "validation_outcome": "pass",
+  "name": "irregular_64",
+  "raw_record": "results\\stage45a_extension\\irregular_64_cpu_native.jsonl",
+  "command": [
+    "C:\\Users\\Anirudh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "scripts/untimed_screen.py",
+    "--runner",
+    "build/validation-cuda/untimed_screen.exe",
+    "--matrix",
+    "data\\stage45a_synthetic_v1\\irregular_64.mtx",
+    "--provenance",
+    "data\\stage45a_synthetic_v1\\irregular_64.provenance.json",
+    "--backend",
+    "cpu_native",
+    "--rhs",
+    "periodic7",
+    "--alpha",
+    "8",
+    "--innercap",
+    "64",
+    "--outercap",
+    "20",
+    "--output",
+    "results\\stage45a_extension\\irregular_64_cpu_native.jsonl"
+  ]
+}

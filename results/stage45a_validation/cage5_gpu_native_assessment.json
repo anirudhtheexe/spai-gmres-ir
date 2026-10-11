@@ -1,0 +1,52 @@
+{
+  "classification": "solver_success",
+  "substatus": "success",
+  "phase": "solve",
+  "backend": "gpu_native",
+  "construction_assessment": {
+    "status": "success",
+    "qr_fits": 11,
+    "qr_unchecked_fits": 54,
+    "maximum_scaled_QR_coefficient_difference": "4.5644325257190321066922902791921200617820380543225678746317890834267272513054870E-16",
+    "maximum_full_column_residual": "0.29829340539987283643971752535580222816011605380189155775281295567710874479372547",
+    "frobenius_I_minus_PA": "1.2969073432306317008034266426867030741718805991473965500161453582246964132314524",
+    "sampled_columns": [
+      0,
+      14,
+      18,
+      27,
+      36
+    ]
+  },
+  "terminal_Decimal_diagnostics": {
+    "inf": "6.698655795466936764763913417115179524002753079637672694451877576E-17",
+    "norm2": "1.0198447953654195238994683418088696925843055305974437637015139728890817619854791E-16",
+    "nbe": "3.0623736897392151181015330481978447581245019802892180557537749948961010189805720E-17",
+    "cbe": "1.0536881863503406752420511561364251767701551021062189682738572990637786905819042E-16",
+    "nbe_allowance": "3.6023386294170119642616807999366813526505027345989009477982869037507022531519726E-15"
+  },
+  "terminal_boundary_uncertain": false,
+  "checks": 1361,
+  "failures": [],
+  "validation_outcome": "pass",
+  "name": "cage5",
+  "raw_record": "results\\stage45a_validation\\cage5_gpu_native.jsonl",
+  "command": [
+    "C:\\Users\\Anirudh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "scripts/untimed_screen.py",
+    "--runner",
+    "build/validation-cuda/untimed_screen.exe",
+    "--matrix",
+    "data\\stage45a_provenance_20261011\\cage5\\cage5.mtx",
+    "--provenance",
+    "data\\stage45a_provenance_20261011\\MANIFEST.json",
+    "--backend",
+    "gpu_native",
+    "--alpha",
+    "5",
+    "--innercap",
+    "37",
+    "--output",
+    "results\\stage45a_validation\\cage5_gpu_native.jsonl"
+  ]
+}

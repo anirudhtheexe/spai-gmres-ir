@@ -1,0 +1,59 @@
+{
+  "classification": "solver_success",
+  "substatus": "success",
+  "phase": "solve",
+  "backend": "cpu_native",
+  "manufactured_reference_original_residual_inf": "0E-7",
+  "construction_assessment": {
+    "status": "success",
+    "qr_fits": 256,
+    "qr_unchecked_fits": 0,
+    "maximum_scaled_QR_coefficient_difference": "5.2209289768652875383982596192357944451098910618413671076265691960E-16",
+    "maximum_full_column_residual": "0.25819888974716111230122791792115653161387824821543912050090829988588670152655686",
+    "frobenius_BN_minus_I": "3.2428105624180496258378590528404619474194488275791662774037012597941553415313662",
+    "frobenius_I_minus_PA": "3.2428105624180495609478845778297767539672207444796704807219996781280585627176811",
+    "sampled_columns": [
+      0,
+      1,
+      16,
+      128,
+      255
+    ]
+  },
+  "terminal_Decimal_diagnostics": {
+    "inf": "1.2027161294124428431728480476555192407728256398513622116297483445E-15",
+    "norm2": "1.3300311053358273871493276635428388454868945345568888598561947818229725874122202E-15",
+    "nbe": "1.9076538359949519737975616804385322923666034680818568562394180469943467977170849E-16",
+    "cbe": "2.2118917322527678899687210531581821071227682045235225208417227828242089590151903E-16",
+    "nbe_allowance": "6.6068588023047001056144043517279733966979599250980371303907805371858713917593802E-15"
+  },
+  "terminal_boundary_uncertain": false,
+  "manufactured_forward_error": "5.9211894646675015489260355631510416666666666666666666666666666666666666666666667E-16",
+  "checks": 3898,
+  "failures": [],
+  "validation_outcome": "pass",
+  "name": "arrowhead_256",
+  "raw_record": "results\\stage45a_extension\\arrowhead_256_cpu_native.jsonl",
+  "command": [
+    "C:\\Users\\Anirudh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "scripts/untimed_screen.py",
+    "--runner",
+    "build/validation-cuda/untimed_screen.exe",
+    "--matrix",
+    "data\\stage45a_synthetic_v1\\arrowhead_256.mtx",
+    "--provenance",
+    "data\\stage45a_synthetic_v1\\arrowhead_256.provenance.json",
+    "--backend",
+    "cpu_native",
+    "--rhs",
+    "periodic7",
+    "--alpha",
+    "32",
+    "--innercap",
+    "256",
+    "--outercap",
+    "20",
+    "--output",
+    "results\\stage45a_extension\\arrowhead_256_cpu_native.jsonl"
+  ]
+}

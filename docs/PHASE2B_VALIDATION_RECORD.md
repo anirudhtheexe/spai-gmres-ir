@@ -301,3 +301,71 @@ foreach($test in @('cuda_spmv_tests','cuda_gmres_tests','cuda_ir_tests','cuda_sp
 | `tests/check_cuda_spai_cli.py` | `BEC8EAD23EF5A2E9F2B5566B7606ABE27F9684F6A1FA656D0ADB2A0898AAAF55` |
 
 No unreported baseline discrepancy remains in the tested scope; singular status divergence and vendor-norm behavior remain explicitly recorded limitations. Evidence is tiny deterministic **uniform-double correctness, not published mixed-precision reproduction**, BSPAI, GPU optimization, scalable performance, general high-dimensional stability or cross-stack equivalence. Validation changed only validation tests/oracles/records and did not edit production or manuscript. Stop atGate3.
+
+## Stage4 independent pre-execution contract
+
+Stage4 is explicitly authorized after Gate3. No tolerance, precision, pattern, score, pivot, or stopping policy is changed. New validation-only `test_cuda_spai_sparse.cpp` compares sparse production with the isolated frozen Gate3 dense constructor and CPU reference. Ordinary fixture status/pattern/shadow/candidate/selection/count equality is required; floating coefficients/residuals/scores use the existing 768-machine-epsilon scale-aware ordinary bound, not bitwise equivalence. Near-boundary differences remain reportable. Original B CSR residuals are independently reconstructed, including zeros outside the shadow, and the small cases use the existing 80-digit oracle.
+
+Progressive synthetic matrices have diagonal 8 or 5, lower diagonal 2, upper diagonal 1, each original row scaled by `2^(i mod 5 - 2)`, n=16,64,256,1024; no random seed. Strict diagonal dominance establishes nonsingularity. Epsilon=.3,beta=8,alpha=5 exercise initial-only and growth fits. CPU comparisons run through n256; dense Gate3 comparisons through n64 to avoid making the validation reference itself scale quadratically. A manufactured n64 solution `(i mod 7-3)/4` supplies independent end-to-end truth. Tiny cap, singular, zero-diagonal and scaling-underflow failures remain covered.
+
+`cuda_spai_allocation_audit.cu` compiles the unchanged production source in a separate validation-only TU with renamed public symbols and wrappers around source-issued cudaMalloc/cudaFree. Its independent pointer ledger measures successful allocation count, cumulative/current/peak/largest bytes and outstanding allocation count; exact agreement with telemetry and zero outstanding at return are required. Vendor internal allocations are excluded from both ledgers. Actual retained per-slot capacity and queried QR workspace are recorded; no universal linear-memory or speed claim is implied. Regressions, Decimal/CLI checks and Compute Sanitizer will be rerun. No timing experiment is authorized.
+
+### Stage4 independently executed results (11 October 2026)
+
+Validation built and ran its own `build/validation-cuda` on the approved host. The first build failed because including the old validation helpers also included their main entrypoint. A validation-only `BSPAI_CUDA_SPAI_HELPERS_ONLY` guard corrected this; the old 1,534-check suite remains unchanged in behavior. No production numerical edits or tolerance changes were made by Validation. Compiler flags independently observed: Debug x64 MSVC `/W4 /fp:strict`, nvcc `--fmad=false`, architecture89, CUBLAS_EMULATE_DOUBLE_PRECISION=0. CUDA-generated wrapper-stub C4211 warnings were observed; no warning suppression was added.
+
+- New sparse C++ suite: **3,363,954 checks, zero failures**. The large count is dominated by checking every outside-shadow residual entry is exactly zero; it is not millions of independent problems. Eight progressive matrices, two tiny success/cap cases, three degenerate/range cases and one n64 end-to-end system are the added input scope.
+- Sparse production versus CPU: full scaling, canonical B/N/P, column/fit histories, patterns/shadows/candidates/selected growth, coefficients, scores, residuals, statuses and fit/growth counts agreed on the ordinary progressive fixtures through n256. Dense Gate3 comparisons through n64 and tiny/failure fixtures also agreed. The known CPU-versus-GPU singular computed-pivot divergence remains unchanged; no fallback or rank threshold was introduced.
+- Every recorded progressive fit independently reconstructs the full `B*m-e` from sparse CSR data. Every residual outside its complete shadow is zero. n16 fits also pass existing independent QR/scoring/structural checks. Unchanged Decimal80 oracle: **48 fits, 395 checks, zero failures**; max coefficient difference `5.1924103169971435235e-16`, max residual difference `6.6400389110193556301e-17`. These ordinary bounds are existing project acceptance policies, not paper-prescribed tolerances.
+- n64 GPU-SPAI/GPU-GMRES/CPU-outer IR agrees with CPU terminal success and the exact manufactured dyadic solution within the predeclared 1e-12 solution bound. Each original residual/BE/update and inner residency record passed. Decimal80: **3 outer states, 208 checks, zero failures**, max normwise-BE diagnostic difference `4.3633911076281281604e-17`. GPU final normwise BE was `4.3325776570737818e-17`; fixed stopping remained `10*2^-53`. No published mixed-precision experiment was reproduced.
+- Preserved CPU binaries:37/190/280/439 = **946**, zero failures, CPU CTest4/4. Preserved CUDA SpMV323, GMRES871, hybridIR665, GPU-SPAI1534 all passed; CUDA CTest **5/5** including new sparse suite. Preserved DecimalGMRES383/48GMRES+125norm snapshots, hybridIR160/21states, Gate3SPAI436/60fits, Gate3IR43/5states, and CLI23+15 all passed.
+- Compute Sanitizer memcheck on the whole sparse suite: **zero errors, zero bytes leaked in zero allocations**. Initcheck: **zero errors**. Both executions completed the 3,363,954-check suite successfully. This is not allocation-failure injection or a proof for untested concurrent/exception scenarios.
+
+### Observed source allocation evidence
+
+The independently wrapped successful cudaMalloc calls, cumulative allocated bytes, largest allocation, live peak, final current bytes and outstanding count exactly match production telemetry, including growth/reallocation and early scaling/degenerate/cap returns. All final currents/counts are zero. The wrapper covers application source calls, not CUDA/cuBLAS/cuSOLVER internal allocations; **these are not total GPU memory-footprint measurements**. Queried solver workspaces and diagnostic/history-slot source allocations are included. Metadata/P packing and per-slot capacity checks passed. Vendor caches/context memory and GMRES workspace are outside SPAI ledger scope.
+
+| diagonal | n | nnz(A/B) | cumulative source bytes | peak live source bytes | largest allocation | max reduced shape | max queried QR bytes | packed N/P bytes |
+|---|---:|---:|---:|---:|---:|---|---:|---:|
+|8|16|46|117104|106168|12800|3x1|12800|384|
+|8|64|190|122672|111736|12800|3x1|12800|1536|
+|8|256|766|144944|134008|12800|3x1|12800|6144|
+|8|1024|3070|234032|223096|24560|3x1|12800|24576|
+|5|16|46|324664|173808|20992|5x3|20992|1080|
+|5|64|190|332536|181680|20992|5x3|20992|4536|
+|5|256|766|364024|213168|20992|5x3|20992|18360|
+|5|1024|3070|489976|339120|24560|5x3|20992|73656|
+
+The two families each issued126 and191 successful source allocation calls respectively, independent of tested n. This shows removal of unconditional dense B/N/P and n-square slot allocations for these bounded sparse-pattern cases. It does not prove asymptotically linear storage for arbitrary matrices: adaptive patterns can become dense and reduced QR/queried workspace can approach quadratic or worse behavior. Source inspection verifies A-CSR offsets/indices are interpreted as B-CSC with numerical values `A[k,i]*d[k]`; `SparseB::at(i,k)` reads that mapping. P assembly uses the packed N coefficient times `d[j]`, retaining the right-side D orientation. Slot allocations use actual m,q,c dimensions with retained capacities; complete shadow support justifies reconstructing full residual only over shadow without changing its value. Old uneven-column/subnormal/rank/score/range regression fixtures passed on the sparse backend.
+
+### Reproducible Stage4 commands and environment
+
+Environment independently queried again: RTX4060 Laptop CC8.9,8585216000 bytes; runtime/driverAPI13040, cuSPARSE12806, cuBLAS130700, cuSOLVER12.3.2. The same Windows/MSVC/CUDA13.4.59/Decimal Python3.12 installation described earlier was used. Tests are correctness executions, with no warmup/timing/repetition statistics or speedup claim. Synthetic inputs are generated by `band(n,diagonal)` in the test; no external matrix provenance or random seed is involved. CPU reference comparisons use the MSVC-linked reference for the new suite; its long double has53 bits, hence the separate Decimal80 checks remain necessary.
+
+```powershell
+cmd /d /c '"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvars64.bat" && "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --build build/validation-cuda --verbose'
+$env:PATH='C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.4\bin\x64;'+$env:PATH
+$env:CUBLAS_EMULATE_DOUBLE_PRECISION='0'
+& build/validation-cuda/cuda_spai_sparse_tests.exe
+& build/validation-cuda/cuda_environment_probe.exe
+& 'C:/Users/Anirudh/AppData/Local/Programs/Python/Python312/python.exe' tests/check_cuda_spai_decimal.py build/validation-cuda/cuda_spai_sparse_tests.exe
+& 'C:/Users/Anirudh/AppData/Local/Programs/Python/Python312/python.exe' tests/check_cuda_ir_decimal.py build/validation-cuda/cuda_spai_sparse_tests.exe
+& 'C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.4/bin/compute-sanitizer.bat' --tool memcheck --leak-check full --error-exitcode 9 build/validation-cuda/cuda_spai_sparse_tests.exe
+& 'C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.4/bin/compute-sanitizer.bat' --tool initcheck --error-exitcode 9 build/validation-cuda/cuda_spai_sparse_tests.exe
+& 'C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/ctest.exe' --test-dir build/validation-cuda --output-on-failure
+& 'C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/ctest.exe' --test-dir build/ninja --output-on-failure
+```
+
+All prior Decimal/CLI commands in the preceding Gate records were rerun against this same independent build. Approved out-of-sandbox host execution remains necessary on this installation; no runtime/OS setting was changed to conceal failures.
+
+| Stage4 artifact | SHA-256 |
+|---|---|
+|src/cuda_spai.cu|0F258C94616E636DC2EE3802D5E9534E851B193F5A756B2C2A0ADEDA89B8964B|
+|include/bspai/cuda_spai.hpp|0866BD05990E2E707F60E4900A65101511FE562A726A3B0090A39BAD02BAA191|
+|cuda/CMakeLists.txt|CDA781D5A3F23C25B5AF24A539694E7147D95678C7AF8AC7B437582095B85D52|
+|tests/test_cuda_spai_sparse.cpp|0FABA0F468FC6A721EB0C030240A25D388C0002B8E36983CD577877BABFA13F7|
+|tests/cuda_spai_allocation_audit.cu|8F2F7AD53417DA78C4644A481408B23A9CB279043387980F43082583C125D29E|
+|tests/cuda_spai_allocation_audit.hpp|13BB2925BFC02C2B088613D1D227F8BC6FD1653E58C17161632B84EC1305444C|
+|tests/reference/cuda_spai_gate3.cu|4BE8173114E422D89700BEDF0680037FC96C04FF137B6750B499355DDCA578ED|
+
+Dense-reference provenance was independently verified: undoing only exported-name substitutions, normalizing LF line endings and retaining one final newline reconstructs **exactly** frozen Gate3 SHA256 `32F19AD4AC35F016224C8FF218B3444B25F9F3DA1BDBBC232A7BBF1DA4FBC106`. It is compiled only as a validation reference, never production fallback. Known singular-status/vendor-norm limits remain; no newly unresolved discrepancy was observed in this bounded scope. No SuiteSparse/published large-matrix dataset, mixed precision, BSPAI, performance optimization, general high-dimensional robustness or universal scalability claim is validated. Stop at Stage4 pending further authorization.

@@ -1,0 +1,41 @@
+{
+  "classification": "solver_nonconvergence",
+  "substatus": "iteration_limit",
+  "phase": "solve",
+  "backend": "cpu_fixed_p",
+  "terminal_Decimal_diagnostics": {
+    "inf": "0.12256825319870483682977586027003345330132438609449934996397386803882682132504911",
+    "norm2": "0.27503832037177091890568578156430696772958173016930060496600021220270468805829781",
+    "nbe": "0.074065102016517040260913625317876915998040050219502141975946375944833755854429529",
+    "cbe": "0.26959618676411419214610194441317672975137382966233650443511065421647745195007529",
+    "nbe_allowance": "4.1853982699493716420813667594962252684641557569798686328871782211212357532186929E-15"
+  },
+  "terminal_boundary_uncertain": false,
+  "checks": 44,
+  "failures": [],
+  "validation_outcome": "pass",
+  "name": "cage5",
+  "raw_record": "results\\stage45a_validation\\cage5_negative_outer0_cpu_fixed_p.jsonl",
+  "command": [
+    "C:\\Users\\Anirudh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "scripts/untimed_screen.py",
+    "--runner",
+    "build/validation-cuda/untimed_screen.exe",
+    "--matrix",
+    "data\\stage45a_provenance_20261011\\cage5\\cage5.mtx",
+    "--provenance",
+    "data\\stage45a_provenance_20261011\\MANIFEST.json",
+    "--backend",
+    "cpu_fixed_p",
+    "--alpha",
+    "5",
+    "--innercap",
+    "37",
+    "--outercap",
+    "0",
+    "--output",
+    "results\\stage45a_validation\\cage5_negative_outer0_cpu_fixed_p.jsonl",
+    "--P",
+    "results\\stage45a_validation\\cage5_cpu_native_P.mtx"
+  ]
+}
