@@ -1,0 +1,62 @@
+/build/
+
+# Visual Studio/CMake/Ninja generated state
+.vs/
+out/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+build.ninja
+.ninja_deps
+.ninja_log
+compile_commands.json
+*.sln
+*.vcxproj*
+*.suo
+*.user
+
+# Compiled objects, libraries, executables, debug symbols and runtime dumps
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+*.exe
+*.pdb
+*.ilk
+*.exp
+*.nvvm
+*.cubin
+*.fatbin
+*.bin
+*.dmp
+
+# Test/tool temporary output and caches
+*.tmp
+*.temp
+*.log
+*.cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+*.coverage
+
+# Local credentials and environment files; source/configuration remains tracked.
+.env
+.env.*
+*.pem
+*.key
+*.p12
+credentials.json
+secrets.json
+
+# Keep project-local Codex role definitions visible to Git.
+!.codex/
+!.codex/config.toml
+!.codex/agents/
+!.codex/agents/*.toml

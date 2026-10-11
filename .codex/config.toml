@@ -1,0 +1,8 @@
+# Defaults for future project coordinator sessions and spawned agents.
+# Explicit custom-agent settings take precedence for the four role files in agents/.
+model = "gpt-5.6-terra"
+model_reasoning_effort = "medium"
+
+[agents]
+default_subagent_model = "gpt-5.6-terra"
+default_subagent_reasoning_effort = "medium"
