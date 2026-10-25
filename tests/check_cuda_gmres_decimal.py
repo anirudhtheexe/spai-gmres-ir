@@ -7,9 +7,9 @@ This is a validation-only oracle, not a production fallback or timing benchmark.
 import argparse
 import decimal
 import json
-import os
 import subprocess
 import sys
+from cuda_test_env import cuda_environment
 
 
 def main():
@@ -29,9 +29,7 @@ def main():
     def norm(vector):
         return sum((x * x for x in vector), D(0)).sqrt()
 
-    env = os.environ.copy()
-    env["PATH"] = r"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.4\bin\x64" + os.pathsep + env.get("PATH", "")
-    env["CUBLAS_EMULATE_DOUBLE_PRECISION"] = "0"
+    env = cuda_environment()
     process = subprocess.run([args.executable], capture_output=True, text=True, env=env)
     checks = failures = snapshots = 0
     maximum_original_difference = maximum_relative_difference = D(0)

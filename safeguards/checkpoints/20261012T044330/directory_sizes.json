@@ -1,0 +1,62 @@
+﻿[
+    {
+        "directory":  "results",
+        "bytes":  1181930093
+    },
+    {
+        "directory":  "build",
+        "bytes":  418246034
+    },
+    {
+        "directory":  ".git",
+        "bytes":  122299926
+    },
+    {
+        "directory":  "data",
+        "bytes":  9780022
+    },
+    {
+        "directory":  "manuscript",
+        "bytes":  1099406
+    },
+    {
+        "directory":  "tests",
+        "bytes":  443552
+    },
+    {
+        "directory":  "docs",
+        "bytes":  292191
+    },
+    {
+        "directory":  "scripts",
+        "bytes":  248932
+    },
+    {
+        "directory":  "src",
+        "bytes":  165922
+    },
+    {
+        "directory":  "safeguards",
+        "bytes":  147347
+    },
+    {
+        "directory":  "include",
+        "bytes":  23171
+    },
+    {
+        "directory":  "cuda",
+        "bytes":  11776
+    },
+    {
+        "directory":  ".codex",
+        "bytes":  8320
+    },
+    {
+        "directory":  "benchmarks",
+        "bytes":  4496
+    },
+    {
+        "directory":  "papers",
+        "bytes":  0
+    }
+]

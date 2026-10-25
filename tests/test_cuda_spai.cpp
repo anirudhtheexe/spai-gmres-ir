@@ -48,7 +48,7 @@ bspai::CudaSpaiResult compare(const Dense& a,const bspai::SpaiOptions& o,bool su
     for(std::size_t k=0;k<r.columns.size()&&k<cpu.columns.size();++k){const auto& c=r.columns[k];const auto& ref=cpu.columns[k];check(c.status==ref.status,"ordinary per-column CPU/GPU status");check(c.pattern==ref.pattern&&c.fits==ref.fits&&c.growths==ref.growths,"ordinary CPU/GPU pattern/work count");
         for(std::size_t j=0;j<c.coefficients.size()&&j<ref.coefficients.size();++j)check(near(c.coefficients[j],ref.coefficients[j]),"ordinary CPU/GPU coefficients within declared allowance");
     }
-    if(successful){audit_result(a,r,o.epsilon);check(gpu.telemetry.gpu_scaling&&gpu.telemetry.gpu_preconditioner_assembly,"GPU numeric scaling/P assembly flags");check(gpu.telemetry.qr_submissions>0,"device QR work submitted");}
+    if(successful){audit_result(a,r,o.epsilon);check(gpu.telemetry.gpu_scaling&&gpu.telemetry.gpu_preconditioner_assembly,"GPU numeric scaling/P assembly flags");check(gpu.telemetry.qr_submissions>0,"device QR work submitted");std::size_t fits=0,growths=0;for(const auto& c:r.columns){fits+=c.fits;growths+=c.growths;}check(gpu.telemetry.downloads==5+4*fits+growths,"packed score-result D2H transfer accounting");}
     emit_fits(r,o.epsilon);std::cout<<"GPU SPAI status="<<bspai::spai_status_name(r.status)<<", streams="<<gpu.telemetry.streams_created<<", fit_batch="<<gpu.telemetry.max_fit_batch<<", qr_before_collect="<<gpu.telemetry.max_qr_submissions_before_collection<<'\n';return gpu;
 }
 void solve_audit(const Dense& a,const std::vector<double>& b,const bspai::CudaIrResult& r){

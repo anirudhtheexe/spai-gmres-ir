@@ -1,0 +1,7 @@
+﻿CMakeLists.txt
+CODEBASE_GUIDE.md
+PROJECT_HANDOFF.md
+cuda/CMakeLists.txt
+docs/PHASE2B_VALIDATION_RECORD.md
+include/bspai/cuda_spai.hpp
+src/cuda_spai.cu

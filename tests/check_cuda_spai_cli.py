@@ -2,10 +2,10 @@
 import argparse
 from decimal import Decimal as D, getcontext
 import math
-import os
 import re
 import subprocess
 import sys
+from cuda_test_env import cuda_environment
 
 
 def main():
@@ -13,9 +13,7 @@ def main():
     p.add_argument("executable")
     p.add_argument("matrix")
     args = p.parse_args()
-    env = os.environ.copy()
-    env["PATH"] = r"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.4\bin\x64" + os.pathsep + env.get("PATH", "")
-    env["CUBLAS_EMULATE_DOUBLE_PRECISION"] = "0"
+    env = cuda_environment()
     checks = failures = 0
 
     def check(ok, name):

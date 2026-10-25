@@ -1,0 +1,12 @@
+{
+  "archive": "SPAI_GMRES_IR_Presentation_Sources.zip",
+  "bytes": 613710,
+  "sha256": "abfd23113e3b00acbe944c979df0eefb4bd7f48c7c018f27f8e3f721fb72ff68",
+  "source_files": 317,
+  "uncompressed_bytes": 1917177,
+  "final_configurations_checked": 120,
+  "accepted_measured_assessments": 360,
+  "saved_decimal80_sidecars": 120,
+  "submission_unchanged": true,
+  "checks": "archive source hashes, ZIP CRC, manifest, unique paths, CSV medians and acceptance"
+}

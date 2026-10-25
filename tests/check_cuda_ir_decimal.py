@@ -3,9 +3,9 @@ import argparse
 from decimal import Decimal as D, getcontext
 import json
 import math
-import os
 import subprocess
 import sys
+from cuda_test_env import cuda_environment
 
 
 def main():
@@ -13,9 +13,7 @@ def main():
     p.add_argument("executable")
     args = p.parse_args()
     getcontext().prec = 80
-    env = os.environ.copy()
-    env["PATH"] = r"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.4\bin\x64" + os.pathsep + env.get("PATH", "")
-    env["CUBLAS_EMULATE_DOUBLE_PRECISION"] = "0"
+    env = cuda_environment()
     run = subprocess.run([args.executable], capture_output=True, text=True, env=env)
     value = lambda x: D.from_float(float(x))
     u = D(2) ** -53

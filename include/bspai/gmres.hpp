@@ -8,11 +8,17 @@
 namespace bspai {
 
 enum class GmresStatus {
-    success, zero_rhs, exact_initial_solution, invalid_input,
-    zero_preconditioned_rhs, breakdown, iteration_limit,
-    nonconvergence, numerical_failure
+    success,
+    zero_rhs,
+    exact_initial_solution,
+    invalid_input,
+    zero_preconditioned_rhs,
+    breakdown,
+    iteration_limit,
+    nonconvergence,
+    numerical_failure
 };
-const char* gmres_status_name(GmresStatus status);
+const char *gmres_status_name(GmresStatus status);
 
 struct GmresOptions {
     double tolerance = 1e-8;
@@ -44,13 +50,11 @@ struct GmresResult {
 };
 
 // Exactly two sparse products, never materialize the rounded matrix P*A.
-std::vector<double> apply_left_preconditioned(const CsrMatrix& a,
-                                             const CsrMatrix& p,
-                                             const std::vector<double>& v);
-GmresResult left_preconditioned_gmres(const CsrMatrix& a, const CsrMatrix& p,
-                                     const std::vector<double>& rhs,
-                                     const GmresOptions& options,
-                                     const std::vector<double>& initial_guess = {});
+std::vector<double> apply_left_preconditioned(const CsrMatrix &a, const CsrMatrix &p,
+                                              const std::vector<double> &v);
+GmresResult left_preconditioned_gmres(const CsrMatrix &a, const CsrMatrix &p,
+                                      const std::vector<double> &rhs, const GmresOptions &options,
+                                      const std::vector<double> &initial_guess = {});
 
 } // namespace bspai
 #endif

@@ -1,4 +1,6 @@
 /build/
+/archives/
+/submission/
 
 # Visual Studio/CMake/Ninja generated state
 .vs/

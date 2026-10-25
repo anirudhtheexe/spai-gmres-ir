@@ -8,10 +8,18 @@
 namespace bspai {
 
 enum class SpaiStatus {
-    success, not_attempted, invalid_input, rank_deficient, numerical_failure,
-    empty_candidates, zero_denominator, invalid_score, no_growth, iteration_limit
+    success,
+    not_attempted,
+    invalid_input,
+    rank_deficient,
+    numerical_failure,
+    empty_candidates,
+    zero_denominator,
+    invalid_score,
+    no_growth,
+    iteration_limit
 };
-const char* spai_status_name(SpaiStatus status);
+const char *spai_status_name(SpaiStatus status);
 
 struct SpaiOptions {
     double epsilon = 0.3;
@@ -24,8 +32,7 @@ struct ScoreResult {
     double score = 0;
     bool clamped = false;
 };
-ScoreResult evaluate_spai_score(double residual_squared, double dot,
-                                double denominator_squared);
+ScoreResult evaluate_spai_score(double residual_squared, double dot, double denominator_squared);
 
 struct SpaiFit {
     std::vector<std::size_t> pattern, shadow, candidates, selected;
@@ -59,7 +66,7 @@ struct SpaiResult {
 // Failed results retain only already fitted coefficients for diagnostics.
 // inverse/preconditioner must not be used as a successful SPAI on failure.
 // Nonsingularity is an input assumption, not globally certified here.
-SpaiResult construct_spai(const CsrMatrix& a, const SpaiOptions& options);
+SpaiResult construct_spai(const CsrMatrix &a, const SpaiOptions &options);
 
 } // namespace bspai
 #endif

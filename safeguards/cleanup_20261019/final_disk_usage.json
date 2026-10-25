@@ -1,0 +1,31 @@
+{
+  "bytes_at_inventory": 1089372929,
+  "files_at_inventory": 217,
+  "categories": {
+    "archives": 632840001,
+    ".git": 452061550,
+    "safeguards": 3279488,
+    "docs": 347466,
+    "submission": 313131,
+    "tests": 239875,
+    "src": 214262,
+    "include": 25040,
+    "scripts": 11131,
+    ".codex": 8320,
+    "PAPER_INDEX.md": 6478,
+    "README.md": 4798,
+    "CODEBASE_GUIDE.md": 4708,
+    "PROJECT_HANDOFF.md": 4549,
+    "AGENTS.md": 3907,
+    "cmake": 3094,
+    "CMakeLists.txt": 2821,
+    ".gitignore": 826,
+    "results": 568,
+    ".clang-format": 494,
+    "cuda": 422
+  },
+  "units": "bytes; snapshot excludes inventory files written afterward",
+  "submission_bytes": 313131,
+  "build_directory_absent": true,
+  "source_cache_directories_absent": true
+}

@@ -1,0 +1,497 @@
+[
+  {
+    "path": ".clang-format",
+    "bytes": 494,
+    "sha256": "390e4c29c46fa1ae3e5c486ee0e1763a355adf82fef52fe5a2e67b8273134888"
+  },
+  {
+    "path": ".codex/agents/bspai_gmres_ir_implementer.toml",
+    "bytes": 2225,
+    "sha256": "2cfade0a43a81f8cb818e3d55f0b3b497476c6ffaa006c76f1b060b9e92f1fc0"
+  },
+  {
+    "path": ".codex/agents/bspai_gmres_ir_manuscript.toml",
+    "bytes": 1750,
+    "sha256": "db37796c1cc56e787644ba677123bed2fd6a612bdf37ca6cf98defce0e0fb2a5"
+  },
+  {
+    "path": ".codex/agents/bspai_gmres_ir_researcher.toml",
+    "bytes": 1691,
+    "sha256": "a92538037686abc8b314410db22df16e89076201e3e4df6a75bbdca3d0a06fe7"
+  },
+  {
+    "path": ".codex/agents/bspai_gmres_ir_validator.toml",
+    "bytes": 2344,
+    "sha256": "a6968486d23bbbefd75fccf9bd618a3cf3da9d127227a299a711fd6cc6015564"
+  },
+  {
+    "path": ".gitignore",
+    "bytes": 826,
+    "sha256": "ac30ea7166e3cdbe011f7fac61b10bc2fda66acbd7eaae673def26dead7e2ce4"
+  },
+  {
+    "path": "AGENTS.md",
+    "bytes": 3907,
+    "sha256": "085cfffc45730c30bcb76adb3cdefa3e2e67a21e4b197bbe72931dfbe1356592"
+  },
+  {
+    "path": "cmake/CudaTargets.cmake",
+    "bytes": 3094,
+    "sha256": "ed92c7fdb235f959ff073a440a223488fb23912a74fefbc0a52a114bd80bb2df"
+  },
+  {
+    "path": "CMakeLists.txt",
+    "bytes": 2821,
+    "sha256": "bf24c213e8f6deaefccdf14a21f29abbc36ebd498169bcca3b605aa91da75021"
+  },
+  {
+    "path": "CODEBASE_GUIDE.md",
+    "bytes": 4708,
+    "sha256": "c32c1b074771a0dd085b94c96479f46ea4cab0237522529eb7ea7cf83194207d"
+  },
+  {
+    "path": "cuda/CMakeLists.txt",
+    "bytes": 422,
+    "sha256": "65925f6f296a06c6e8aa7db5ef0d386c032a869d0ac74c02f22cae5717769f2f"
+  },
+  {
+    "path": "docs/CLEANUP_FORMATTING.md",
+    "bytes": 8059,
+    "sha256": "c0f9b16c1a5f2387efe9bbbba4e0c1d3bff5df4761bec7118b21ee63a90cf584"
+  },
+  {
+    "path": "docs/CLEANUP_INDEPENDENT_REVIEW.md",
+    "bytes": 7761,
+    "sha256": "6ed91a5ec163abef89b6355bba5341793f14a1e939df51968b53b4905feec248"
+  },
+  {
+    "path": "docs/CLEANUP_PACKAGE_VALIDATION.md",
+    "bytes": 6697,
+    "sha256": "e3dea5c328c4cd8aa8cc909a873593b53d6ea68e7247fc3e6e23304b8a5f53dd"
+  },
+  {
+    "path": "docs/CLEANUP_PLAN.md",
+    "bytes": 3074,
+    "sha256": "cc6bcbe683612b6350319a30e1a87884e4cb741d07ca1c535186a9c3587def58"
+  },
+  {
+    "path": "docs/CLEANUP_RECORD.md",
+    "bytes": 9721,
+    "sha256": "ffd9a83bf8eeecbcc4684f9408b82f4ab05328a8d88700f1a28395da125f289d"
+  },
+  {
+    "path": "docs/CLEANUP_SOURCE_REVIEW.md",
+    "bytes": 6541,
+    "sha256": "dae2e3962304b85cc9980cebd230cf66796f68ba1f7f6745d20aecbae8e7729a"
+  },
+  {
+    "path": "docs/CPU_MILESTONE1.md",
+    "bytes": 4895,
+    "sha256": "30cd728b17147e605a48d98642a32400d002b13f9345e798e5478a3eb313cbf8"
+  },
+  {
+    "path": "docs/CPU_MILESTONE2.md",
+    "bytes": 7300,
+    "sha256": "0492832dac7538f4dea5bd8eeebbe630764ee6e2971de3fb9d70b8ac2b69856d"
+  },
+  {
+    "path": "docs/CPU_MILESTONE3.md",
+    "bytes": 7828,
+    "sha256": "37f9f36f238ec71c58a5d817b5ab4b15a0d1687824643049375ef14bfdcc1097"
+  },
+  {
+    "path": "docs/CPU_MILESTONE4.md",
+    "bytes": 9015,
+    "sha256": "56f0515db75c4dd01061a07444a9d5e03a890064ddb75d61b07124c481cabeda"
+  },
+  {
+    "path": "docs/CUDA_MILESTONE5A.md",
+    "bytes": 6784,
+    "sha256": "011dbb52f207bc7e6609e4497b3312c67878d718d38f026fef6b1152b390fa7c"
+  },
+  {
+    "path": "docs/CUDA_STAGE1_GMRES.md",
+    "bytes": 9562,
+    "sha256": "78c00d0488b85fdab8a010f47e3137f156947bdc1092d606b90deb93ea3c28c9"
+  },
+  {
+    "path": "docs/CUDA_STAGE2_HYBRID_IR.md",
+    "bytes": 11255,
+    "sha256": "1656de49f55a4aa64d96541bddbdef10ed1ef567ab818b3355e51ca83836deb8"
+  },
+  {
+    "path": "docs/CUDA_STAGE3_GPU_SPAI.md",
+    "bytes": 14693,
+    "sha256": "e9689f35e8016db8db0b6a68d5c42b2558c8974ce8a4c5f35bc1c1dd531cebfe"
+  },
+  {
+    "path": "docs/CUDA_STAGE4_SCALABLE_SPAI.md",
+    "bytes": 12068,
+    "sha256": "666b06fe76c5821de0f1afad1a4e50ad37e2fc363a6803ab0604e08c356d8065"
+  },
+  {
+    "path": "docs/EXPERIMENT2A_FP32_SPEC.md",
+    "bytes": 2930,
+    "sha256": "15b7e9b424f7e517cc5a4e0526bcec42f0b5d2f0255cf493424de7b61810c827"
+  },
+  {
+    "path": "docs/EXPERIMENT2A_LIVE_HANDOFF.md",
+    "bytes": 48321,
+    "sha256": "8c145404164f388ddc3db0728514038e8d8591507bd5318bb25bbf4be8d766c9"
+  },
+  {
+    "path": "docs/PHASE1_REPORT.md",
+    "bytes": 9562,
+    "sha256": "6dbf75d5cb21553786930001ec5b5d51309308d3faee13aaf13c8aadf38b8d1d"
+  },
+  {
+    "path": "docs/PHASE2A_ALGORITHM_SPEC.md",
+    "bytes": 16939,
+    "sha256": "3e2c4273946b52eb9efc2f7b28690fd43cb29933f8dbfe7a8ef6476d61fd5c54"
+  },
+  {
+    "path": "docs/PHASE2A_VALIDATION_PLAN.md",
+    "bytes": 33536,
+    "sha256": "cb811d2b270f2b7869a5396dcc9741cd83fbf03c7da1fe6af4588d9dab82261a"
+  },
+  {
+    "path": "docs/PHASE2B_VALIDATION_RECORD.md",
+    "bytes": 80999,
+    "sha256": "cf4890dcecced69c4b07b1a40dae0991905bae0b9053225f2249f0da77559247"
+  },
+  {
+    "path": "docs/README.md",
+    "bytes": 1215,
+    "sha256": "a57231221d714f124a40c1152bbfa1960f50e52646e32070d31463c8f034279e"
+  },
+  {
+    "path": "docs/STAGE4_5_EXPERIMENT_PLAN.md",
+    "bytes": 10653,
+    "sha256": "284e50c7df13e4a92de18270bc4d0e28a523676ff56c29a170bedf8ee87218bf"
+  },
+  {
+    "path": "docs/STAGE4_5A_INDEPENDENT_VALIDATION.md",
+    "bytes": 18058,
+    "sha256": "c7f0023ed639c35588706f6a96966e36d1bc3f9ef1a5c61e15dfe39e1e4f4a56"
+  },
+  {
+    "path": "include/bspai/cpu.hpp",
+    "bytes": 1279,
+    "sha256": "d734268768049d67ca57781567762e859476b10e6695442234182fa2f9e4de49"
+  },
+  {
+    "path": "include/bspai/cuda_gmres.hpp",
+    "bytes": 2175,
+    "sha256": "6203158c19bb8f9d7502dcd5f4f4097cad7859c792ac330afd5e355d0dc2b312"
+  },
+  {
+    "path": "include/bspai/cuda_ir.hpp",
+    "bytes": 1479,
+    "sha256": "8eec2c57d46591bd89cc9f1f6b0ed3df86ac679cfd878f25e3742f9a56635dd4"
+  },
+  {
+    "path": "include/bspai/cuda_spai.hpp",
+    "bytes": 2796,
+    "sha256": "012258731354878f4047b931e1ff6361582e07dc11dc74c59d2aa7245e45d0bc"
+  },
+  {
+    "path": "include/bspai/cuda_spmv.hpp",
+    "bytes": 616,
+    "sha256": "12fe90594cbf6b75cf154cff78b11fa26ca78fa260a014e09cf9462c4e6c57e0"
+  },
+  {
+    "path": "include/bspai/fp32.hpp",
+    "bytes": 5228,
+    "sha256": "e27eb24b5b94d7dfd284d9e9f97c2c002bdd5f3dcd30b976540f6e63653d69d1"
+  },
+  {
+    "path": "include/bspai/fp32_cuda_gmres.hpp",
+    "bytes": 1123,
+    "sha256": "5e1893d84436a91a5d996052826e9b99a92ab116a7b6292599b31d086bb8e92b"
+  },
+  {
+    "path": "include/bspai/fp32_cuda_spai.hpp",
+    "bytes": 3227,
+    "sha256": "2940297ffb02b89eec692e5066c7307ee3ac7f6e2894683cb91047f0f1de2d46"
+  },
+  {
+    "path": "include/bspai/fp32_cuda_spmv.hpp",
+    "bytes": 588,
+    "sha256": "e1386605a61dff7bcbfd39559892314a95648810a61700c278e4c75025fcc9c5"
+  },
+  {
+    "path": "include/bspai/gmres.hpp",
+    "bytes": 2173,
+    "sha256": "789ff1ac2dfac691f19515dd687ab13a5d71a1938a4fd90792d7cdc7cbc1c941"
+  },
+  {
+    "path": "include/bspai/ir.hpp",
+    "bytes": 2198,
+    "sha256": "4b51a58c66fdc2981ad77aa2c2feeaa05dc1bb9c5233e537ff72baea426fd486"
+  },
+  {
+    "path": "include/bspai/spai.hpp",
+    "bytes": 2158,
+    "sha256": "fbafe9a47c99465f4d58abe3a84d73e558b6ffb1893774b631d8f7f19751c8ab"
+  },
+  {
+    "path": "PAPER_INDEX.md",
+    "bytes": 6478,
+    "sha256": "f82f32dbec648cf065e971193275a05c265b8e3cff29380362a2fc64ff8481c9"
+  },
+  {
+    "path": "PROJECT_HANDOFF.md",
+    "bytes": 4549,
+    "sha256": "e9df9f17faee678fd2b2d425e4f8413e795085b4c86d5ff0bbef03834af96fe9"
+  },
+  {
+    "path": "README.md",
+    "bytes": 4798,
+    "sha256": "bc9fc1097d97e4c8148706ff4d770c4e295bd8026c9405310f8b3ce0da9900d6"
+  },
+  {
+    "path": "scripts/build_cuda_msvc.cmd",
+    "bytes": 151,
+    "sha256": "48da170388b7a4a0049d1a1163c779f3ee0f7bcd1273129dadfce5defd57c182"
+  },
+  {
+    "path": "scripts/build_windows.cmd",
+    "bytes": 2143,
+    "sha256": "29277c53c8e6ebc7074f66dbfa000d1a2527975bab1cf9b02189be4ea7db1606"
+  },
+  {
+    "path": "scripts/package_submission.py",
+    "bytes": 2922,
+    "sha256": "ab068d0483ce755b098d2feb81971d22571861d042129ed9920d3a5683792a16"
+  },
+  {
+    "path": "scripts/research_archive.py",
+    "bytes": 5915,
+    "sha256": "5ff01ee9996b152d85cb70a87699b17f8c02357f5179faa77be3a012be40dd21"
+  },
+  {
+    "path": "src/cpu.cpp",
+    "bytes": 6894,
+    "sha256": "88ab693cba5cf8e4036ec34575e98a2aeabf45331e08b048134a06151ee04372"
+  },
+  {
+    "path": "src/cuda_environment.cpp",
+    "bytes": 1875,
+    "sha256": "63956ede9cb3324688e95269b24c9ad5c1abfa957729eba05b2640416b869426"
+  },
+  {
+    "path": "src/cuda_gmres.cu",
+    "bytes": 28502,
+    "sha256": "e43cf0df4ddced33aa35735816d2a38b1f396087eec773724fe2294a48f490f9"
+  },
+  {
+    "path": "src/cuda_hybrid_main.cpp",
+    "bytes": 7182,
+    "sha256": "c6a16517be3304cce582ecc965d9faa158ab9ea4df172b7e494d46c8493e9258"
+  },
+  {
+    "path": "src/cuda_ir.cpp",
+    "bytes": 7872,
+    "sha256": "9bed4792f58e309e804f2fabfeadf2689749f94eac17b41e1bb8a2d52ea30cb1"
+  },
+  {
+    "path": "src/cuda_norm_probe.cpp",
+    "bytes": 4226,
+    "sha256": "653dbc53706935d8376804f323b38319d838a55440895108c63ca3ca6650bd19"
+  },
+  {
+    "path": "src/cuda_spai.cu",
+    "bytes": 46935,
+    "sha256": "2f1899e356047d6d5e9ca0efdec23ba6342a501549aa6a195e71a40671db6a93"
+  },
+  {
+    "path": "src/cuda_spmv.cu",
+    "bytes": 8559,
+    "sha256": "6fab7fb6a5f26ccb32ab25c70111ff9bd7f7b32405d7263d0ba73e6ae6bc0158"
+  },
+  {
+    "path": "src/fp32_cpu.cpp",
+    "bytes": 25346,
+    "sha256": "dfdf510dc91a9b032ce162cb8edd15282879c38c04047a278717b9dfa68c636c"
+  },
+  {
+    "path": "src/fp32_cuda_gmres.cu",
+    "bytes": 18129,
+    "sha256": "d23766043a2e9b4f621df1e578a64b4fda86f0c0c2b0799c3f3f2631b35eed32"
+  },
+  {
+    "path": "src/fp32_cuda_spai.cu",
+    "bytes": 8157,
+    "sha256": "11d7451df966ffaa3f18649af1db93d7fb73f84696f13a238ee9de36bd75e604"
+  },
+  {
+    "path": "src/fp32_cuda_spmv.cu",
+    "bytes": 5301,
+    "sha256": "7f44d9220a8470e57092e5be4f3810e2a30f7fc3ea9e93f5b8b11a577fe886da"
+  },
+  {
+    "path": "src/gmres.cpp",
+    "bytes": 12123,
+    "sha256": "5b32b7cc14fdb79962178ac581acaba3fc3c128c1efd634ac7e1d779783f3a59"
+  },
+  {
+    "path": "src/ir.cpp",
+    "bytes": 9869,
+    "sha256": "e08c3f07030957be93bcdb2d8aef1635147dcc6607661ed0afce042531a51cc3"
+  },
+  {
+    "path": "src/main.cpp",
+    "bytes": 1313,
+    "sha256": "2128a55ffc8759b17c6ce2be0c323cf17ecd65b976f9ceb6236a2d9b5ee2f16e"
+  },
+  {
+    "path": "src/solver_main.cpp",
+    "bytes": 6192,
+    "sha256": "da82013533253d9fc7e2c3a69a308e78f107355c2e1982bd6cc9ae841db950cd"
+  },
+  {
+    "path": "src/spai.cpp",
+    "bytes": 15787,
+    "sha256": "9671a068becf1dcd8e55d019393d5fbb94953a0217b3bf9058ecd8489446a32d"
+  },
+  {
+    "path": "tests/check_cuda_gmres_decimal.py",
+    "bytes": 4705,
+    "sha256": "1e8adc3737ff5b41b13f629f89dfbadc13f32326dbc58d40c440e42d7c8f98fc"
+  },
+  {
+    "path": "tests/check_cuda_ir_cli.py",
+    "bytes": 3056,
+    "sha256": "cee19c496f450c635f10ca3a056511a2a1d7e7ee87076826c7b2a05d5f6528da"
+  },
+  {
+    "path": "tests/check_cuda_ir_decimal.py",
+    "bytes": 3478,
+    "sha256": "9162e1d58643ac07230a43eff13759117d536bba959b157d12b53d082a846906"
+  },
+  {
+    "path": "tests/check_cuda_spai_cli.py",
+    "bytes": 2654,
+    "sha256": "4645511454cf3ecf2d42e721fba096395ac86e107a2de6f418dd01d88cdb6042"
+  },
+  {
+    "path": "tests/check_cuda_spai_decimal.py",
+    "bytes": 6085,
+    "sha256": "d0700a25ec5007d6d40076f4da29f2edff9db62caa3e2fdfd864b18875abeeed"
+  },
+  {
+    "path": "tests/check_release_cpu_decimal.py",
+    "bytes": 18905,
+    "sha256": "4c7ee2f2fab34b4d4021b911c21dedfb3d3bb6fcca0920fe24517d156821ec1e"
+  },
+  {
+    "path": "tests/check_solver_cli.py",
+    "bytes": 2443,
+    "sha256": "ebd39a076e7d858ee7589af88d93a081e49d932de635b9a5bdaee452d1704c2b"
+  },
+  {
+    "path": "tests/cuda_spai_allocation_audit.cu",
+    "bytes": 1703,
+    "sha256": "8f2f7ad53417da78c4644a481408b23a9cb279043387980f43082583c125d29e"
+  },
+  {
+    "path": "tests/cuda_spai_allocation_audit.hpp",
+    "bytes": 293,
+    "sha256": "13bb2925bfc02c2b088613d1d227f8bc6fd1653e58c17161632b84ec1305444c"
+  },
+  {
+    "path": "tests/cuda_test_env.py",
+    "bytes": 698,
+    "sha256": "3f9169776e69316b6dcd4172f93ac6cac83086f541a49687bf87aa6524ac75e1"
+  },
+  {
+    "path": "tests/fixtures/tiny_nonsymmetric.mtx",
+    "bytes": 198,
+    "sha256": "1e33f403765fe840682964d706917878dcb968b3f73e1cfb71529e82a87f691d"
+  },
+  {
+    "path": "tests/reference/cuda_spai_gate3.cu",
+    "bytes": 26735,
+    "sha256": "1bdc400fb89954cb36722e6b7d0afa295787d929272675e3193d3e4abe71a293"
+  },
+  {
+    "path": "tests/reference/cuda_spai_gate3.hpp",
+    "bytes": 327,
+    "sha256": "172ad32326c99315539fdb64bec3dbba5dfb70ef887988a125de2fe80d691cb1"
+  },
+  {
+    "path": "tests/release_cpu_snapshot.cpp",
+    "bytes": 16209,
+    "sha256": "fdcbd64affca41e8f5e22d9081c02ef3a3f52a8359b0693203901b00853b56e5"
+  },
+  {
+    "path": "tests/test_cpu.cpp",
+    "bytes": 6286,
+    "sha256": "1469f4a3beb8e511bb26d178b5b13fb366b9cd15d0df8f23b40488fb6ba59a86"
+  },
+  {
+    "path": "tests/test_cuda_gmres.cpp",
+    "bytes": 17516,
+    "sha256": "b2658b9952bf17c4d534571ec5b2145a37d32846a63def44ba9255b0cb5bfe3b"
+  },
+  {
+    "path": "tests/test_cuda_ir.cpp",
+    "bytes": 12751,
+    "sha256": "a5d852b5544215cd7befb1fa00e9b3ea26432509d138a65204d1c5436c5ea41b"
+  },
+  {
+    "path": "tests/test_cuda_spai.cpp",
+    "bytes": 16931,
+    "sha256": "e8427391dd6e18edd30a03aebb0cc728d75a19445e78edda6b1a46483f928243"
+  },
+  {
+    "path": "tests/test_cuda_spai_sparse.cpp",
+    "bytes": 7198,
+    "sha256": "0faba0f468fc6a721eb0c030240a25d388c0002b8e36983cd577877babfa13f7"
+  },
+  {
+    "path": "tests/test_cuda_spmv.cpp",
+    "bytes": 9313,
+    "sha256": "d659c7aa4c26e5b9f3bb3b46b74a5bf6a05d3b29b44427b5b72566661cf029eb"
+  },
+  {
+    "path": "tests/test_fp32.cpp",
+    "bytes": 3840,
+    "sha256": "f55e36162923dee7d26598699a90db67bed8b6b67570758d5bf83bb69f78b238"
+  },
+  {
+    "path": "tests/test_fp32_cuda_gmres.cpp",
+    "bytes": 4763,
+    "sha256": "efb2b23749d515589e5e6428b3f38da48f8325096e19cc4e66d61b298c0b804e"
+  },
+  {
+    "path": "tests/test_fp32_cuda_spai.cpp",
+    "bytes": 9094,
+    "sha256": "9f10994e3133345a5723f413c5a1c683339af2bfcc5da5342808786b06378c1b"
+  },
+  {
+    "path": "tests/test_fp32_cuda_spmv.cpp",
+    "bytes": 1882,
+    "sha256": "640aa4e55798297b662e6d0d5c5df3f81ec264ffebc3d4dec04ce10cde5262d6"
+  },
+  {
+    "path": "tests/test_gmres.cpp",
+    "bytes": 20233,
+    "sha256": "137ba13a946e63ed756e3cf4b6bbf3c8b767a51d835595a8c5c627699465fd7a"
+  },
+  {
+    "path": "tests/test_ir.cpp",
+    "bytes": 20592,
+    "sha256": "6fc4a6341f42c7627ceb1f2b1edd3f73dba21291902d0ea3553532361a733ec4"
+  },
+  {
+    "path": "tests/test_spai.cpp",
+    "bytes": 18547,
+    "sha256": "ac7a22b1ed2ee86ed544e08a04cc56a7e6c7f57a4e2a1191d0f8f3fcfadadcff"
+  },
+  {
+    "path": "tests/test_submission_tools.py",
+    "bytes": 3440,
+    "sha256": "c7cea595a176b87f580c4bcdf45c27c699fcd3293f0929c700013465d416ac24"
+  }
+]

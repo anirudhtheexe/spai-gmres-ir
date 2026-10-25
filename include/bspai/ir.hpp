@@ -7,10 +7,15 @@
 namespace bspai {
 
 enum class IrStatus {
-    success, invalid_input, construction_failure, inner_failure,
-    stagnation, iteration_limit, numerical_failure
+    success,
+    invalid_input,
+    construction_failure,
+    inner_failure,
+    stagnation,
+    iteration_limit,
+    numerical_failure
 };
-const char* ir_status_name(IrStatus status);
+const char *ir_status_name(IrStatus status);
 
 struct IrOptions {
     SpaiOptions spai;
@@ -51,17 +56,14 @@ struct IrResult {
 };
 
 double ir_backward_tolerance(); // Fixed 10*2^-53, not configurable.
-IrDiagnostics evaluate_ir_diagnostics(const CsrMatrix& a,
-                                      const std::vector<double>& rhs,
-                                      const std::vector<double>& x,
-                                      const std::vector<double>& reference = {});
-IrResult refine_with_preconditioner(const CsrMatrix& a, const CsrMatrix& p,
-                                    const std::vector<double>& rhs,
-                                    const IrOptions& options,
-                                    const std::vector<double>& reference = {});
-IrResult spai_gmres_ir(const CsrMatrix& a, const std::vector<double>& rhs,
-                       const IrOptions& options,
-                       const std::vector<double>& reference = {});
+IrDiagnostics evaluate_ir_diagnostics(const CsrMatrix &a, const std::vector<double> &rhs,
+                                      const std::vector<double> &x,
+                                      const std::vector<double> &reference = {});
+IrResult refine_with_preconditioner(const CsrMatrix &a, const CsrMatrix &p,
+                                    const std::vector<double> &rhs, const IrOptions &options,
+                                    const std::vector<double> &reference = {});
+IrResult spai_gmres_ir(const CsrMatrix &a, const std::vector<double> &rhs, const IrOptions &options,
+                       const std::vector<double> &reference = {});
 
 } // namespace bspai
 #endif

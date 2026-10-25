@@ -1,0 +1,279 @@
+﻿ M .gitignore
+ M CMakeLists.txt
+ M CODEBASE_GUIDE.md
+ M PROJECT_HANDOFF.md
+ D RESUME_PROMPT.md
+ D STAGE45A_EXTENSION.md
+ D STAGE45A_NUMERICAL_VALIDATION.md
+ M cuda/CMakeLists.txt
+ D data/stage45a_provenance_20261011/MANIFEST.json
+ D data/stage45a_provenance_20261011/add32.tar.gz
+ D data/stage45a_provenance_20261011/add32/add32.mtx
+ D data/stage45a_provenance_20261011/add32/add32_b.mtx
+ D data/stage45a_provenance_20261011/cage5.tar.gz
+ D data/stage45a_provenance_20261011/cage5/cage5.mtx
+ D data/stage45a_provenance_20261011/gre_115.tar.gz
+ D data/stage45a_provenance_20261011/gre_115/gre_115.mtx
+ D data/stage45a_provenance_20261011/orsreg_1.tar.gz
+ D data/stage45a_provenance_20261011/orsreg_1/orsreg_1.mtx
+ D data/stage45a_provenance_20261011/pores_3.tar.gz
+ D data/stage45a_provenance_20261011/pores_3/pores_3.mtx
+ D data/stage45a_provenance_20261011/saylr1.tar.gz
+ D data/stage45a_provenance_20261011/saylr1/saylr1.mtx
+ D data/stage45a_provenance_20261011/sherman4.tar.gz
+ D data/stage45a_provenance_20261011/sherman4/sherman4.mtx
+ D data/stage45a_provenance_20261011/sherman4/sherman4_b.mtx
+ D data/stage45a_provenance_20261011/sherman5.tar.gz
+ D data/stage45a_provenance_20261011/sherman5/sherman5.mtx
+ D data/stage45a_provenance_20261011/sherman5/sherman5_b.mtx
+ D data/stage45a_provenance_20261011/steam1.tar.gz
+ D data/stage45a_provenance_20261011/steam1/steam1.mtx
+ D data/stage45a_provenance_20261011/steam3.tar.gz
+ D data/stage45a_provenance_20261011/steam3/steam3.mtx
+ D data/stage45a_synthetic_v1/MANIFEST.json
+ D data/stage45a_synthetic_v1/arrowhead_1024.mtx
+ D data/stage45a_synthetic_v1/arrowhead_1024.provenance.json
+ D data/stage45a_synthetic_v1/arrowhead_256.mtx
+ D data/stage45a_synthetic_v1/arrowhead_256.provenance.json
+ D data/stage45a_synthetic_v1/arrowhead_64.mtx
+ D data/stage45a_synthetic_v1/arrowhead_64.provenance.json
+ D data/stage45a_synthetic_v1/irregular_1024.mtx
+ D data/stage45a_synthetic_v1/irregular_1024.provenance.json
+ D data/stage45a_synthetic_v1/irregular_256.mtx
+ D data/stage45a_synthetic_v1/irregular_256.provenance.json
+ D data/stage45a_synthetic_v1/irregular_64.mtx
+ D data/stage45a_synthetic_v1/irregular_64.provenance.json
+ D data/stage45a_synthetic_v1/stencil_1024.mtx
+ D data/stage45a_synthetic_v1/stencil_1024.provenance.json
+ D data/stage45a_synthetic_v1/stencil_256.mtx
+ D data/stage45a_synthetic_v1/stencil_256.provenance.json
+ D data/stage45a_synthetic_v1/stencil_64.mtx
+ D data/stage45a_synthetic_v1/stencil_64.provenance.json
+ M docs/PHASE2B_VALIDATION_RECORD.md
+ M include/bspai/cpu.hpp
+ M include/bspai/cuda_gmres.hpp
+ M include/bspai/cuda_ir.hpp
+ M include/bspai/cuda_spai.hpp
+ M include/bspai/cuda_spmv.hpp
+ M include/bspai/gmres.hpp
+ M include/bspai/ir.hpp
+ M include/bspai/spai.hpp
+ D manuscript/IEEE_Conference_Template/IEEEtran.cls
+ D manuscript/IEEE_Conference_Template/IEEEtran_HOWTO.pdf
+ D manuscript/IEEE_Conference_Template/conference_101719.pdf
+ D manuscript/IEEE_Conference_Template/conference_101719.tex
+ D manuscript/IEEE_Conference_Template/fig1.png
+ D results/stage45a_extension/ASSESSMENT_EXTENSION.json
+ D results/stage45a_extension/ASSESSMENT_EXTENSION_FINAL.json
+ D results/stage45a_extension/ASSESSMENT_EXTENSION_WITH_APPLICATION.json
+ D results/stage45a_extension/add32_cpu_native.jsonl
+ D results/stage45a_extension/add32_cpu_native_assessment.json
+ D results/stage45a_extension/add32_gpu_native.jsonl
+ D results/stage45a_extension/add32_gpu_native_assessment.json
+ D results/stage45a_extension/add32_native_comparison.json
+ D results/stage45a_extension/arrowhead_1024_cpu_native.jsonl
+ D results/stage45a_extension/arrowhead_1024_cpu_native_assessment.json
+ D results/stage45a_extension/arrowhead_1024_gpu_native.jsonl
+ D results/stage45a_extension/arrowhead_1024_gpu_native_assessment.json
+ D results/stage45a_extension/arrowhead_1024_native_comparison.json
+ D results/stage45a_extension/arrowhead_256_cpu_native.jsonl
+ D results/stage45a_extension/arrowhead_256_cpu_native_assessment.json
+ D results/stage45a_extension/arrowhead_256_gpu_native.jsonl
+ D results/stage45a_extension/arrowhead_256_gpu_native_assessment.json
+ D results/stage45a_extension/arrowhead_256_native_comparison.json
+ D results/stage45a_extension/arrowhead_64_cpu_native.jsonl
+ D results/stage45a_extension/arrowhead_64_cpu_native_assessment.json
+ D results/stage45a_extension/arrowhead_64_gpu_native.jsonl
+ D results/stage45a_extension/arrowhead_64_gpu_native_assessment.json
+ D results/stage45a_extension/arrowhead_64_native_comparison.json
+ D results/stage45a_extension/irregular_1024_cpu_native.jsonl
+ D results/stage45a_extension/irregular_1024_cpu_native_assessment.json
+ D results/stage45a_extension/irregular_1024_gpu_native.jsonl
+ D results/stage45a_extension/irregular_1024_gpu_native_assessment.json
+ D results/stage45a_extension/irregular_1024_native_comparison.json
+ D results/stage45a_extension/irregular_256_cpu_native.jsonl
+ D results/stage45a_extension/irregular_256_cpu_native_assessment.json
+ D results/stage45a_extension/irregular_256_gpu_native.jsonl
+ D results/stage45a_extension/irregular_256_gpu_native_assessment.json
+ D results/stage45a_extension/irregular_256_native_comparison.json
+ D results/stage45a_extension/irregular_64_cpu_native.jsonl
+ D results/stage45a_extension/irregular_64_cpu_native_assessment.json
+ D results/stage45a_extension/irregular_64_gpu_native.jsonl
+ D results/stage45a_extension/irregular_64_gpu_native_assessment.json
+ D results/stage45a_extension/irregular_64_native_comparison.json
+ D results/stage45a_extension/sherman5_cpu_native.jsonl
+ D results/stage45a_extension/sherman5_cpu_native_assessment.json
+ D results/stage45a_extension/sherman5_gpu_native.jsonl
+ D results/stage45a_extension/sherman5_gpu_native_assessment.json
+ D results/stage45a_extension/sherman5_native_comparison.json
+ D results/stage45a_extension/stencil_1024_cpu_native.jsonl
+ D results/stage45a_extension/stencil_1024_cpu_native_assessment.json
+ D results/stage45a_extension/stencil_1024_gpu_native.jsonl
+ D results/stage45a_extension/stencil_1024_gpu_native_assessment.json
+ D results/stage45a_extension/stencil_1024_native_comparison.json
+ D results/stage45a_extension/stencil_256_cpu_native.jsonl
+ D results/stage45a_extension/stencil_256_cpu_native_assessment.json
+ D results/stage45a_extension/stencil_256_gpu_native.jsonl
+ D results/stage45a_extension/stencil_256_gpu_native_assessment.json
+ D results/stage45a_extension/stencil_256_native_comparison.json
+ D results/stage45a_extension/stencil_64_cpu_native.jsonl
+ D results/stage45a_extension/stencil_64_cpu_native_assessment.json
+ D results/stage45a_extension/stencil_64_gpu_native.jsonl
+ D results/stage45a_extension/stencil_64_gpu_native_assessment.json
+ D results/stage45a_extension/stencil_64_native_comparison.json
+ D results/stage45a_validation/ASSESSMENT_FINAL.json
+ D results/stage45a_validation/cage5_cpu_fixed_p.jsonl
+ D results/stage45a_validation/cage5_cpu_fixed_p_assessment.json
+ D results/stage45a_validation/cage5_cpu_native.jsonl
+ D results/stage45a_validation/cage5_cpu_native_P.mtx
+ D results/stage45a_validation/cage5_cpu_native_assessment.json
+ D results/stage45a_validation/cage5_fixed_p_comparison.json
+ D results/stage45a_validation/cage5_gpu_fixed_p.jsonl
+ D results/stage45a_validation/cage5_gpu_fixed_p_assessment.json
+ D results/stage45a_validation/cage5_gpu_native.jsonl
+ D results/stage45a_validation/cage5_gpu_native_assessment.json
+ D results/stage45a_validation/cage5_native_comparison.json
+ D results/stage45a_validation/cage5_negative_inner1_cpu_fixed_p.jsonl
+ D results/stage45a_validation/cage5_negative_inner1_cpu_fixed_p_assessment.json
+ D results/stage45a_validation/cage5_negative_inner1_gpu_fixed_p.jsonl
+ D results/stage45a_validation/cage5_negative_inner1_gpu_fixed_p_assessment.json
+ D results/stage45a_validation/cage5_negative_outer0_cpu_fixed_p.jsonl
+ D results/stage45a_validation/cage5_negative_outer0_cpu_fixed_p_assessment.json
+ D results/stage45a_validation/cage5_negative_outer0_gpu_fixed_p.jsonl
+ D results/stage45a_validation/cage5_negative_outer0_gpu_fixed_p_assessment.json
+ D results/stage45a_validation/cage5_reference80_120.json
+ D results/stage45a_validation/gre_115_cpu_fixed_p.jsonl
+ D results/stage45a_validation/gre_115_cpu_fixed_p_assessment.json
+ D results/stage45a_validation/gre_115_cpu_native.jsonl
+ D results/stage45a_validation/gre_115_cpu_native_P.mtx
+ D results/stage45a_validation/gre_115_cpu_native_assessment.json
+ D results/stage45a_validation/gre_115_fixed_p_comparison.json
+ D results/stage45a_validation/gre_115_gpu_fixed_p.jsonl
+ D results/stage45a_validation/gre_115_gpu_fixed_p_assessment.json
+ D results/stage45a_validation/gre_115_gpu_native.jsonl
+ D results/stage45a_validation/gre_115_gpu_native_assessment.json
+ D results/stage45a_validation/gre_115_native_comparison.json
+ D results/stage45a_validation/gre_115_reference80_120.json
+ D results/stage45a_validation/orsreg_1_cpu_native.jsonl
+ D results/stage45a_validation/orsreg_1_cpu_native_assessment.json
+ D results/stage45a_validation/orsreg_1_gpu_native.jsonl
+ D results/stage45a_validation/orsreg_1_gpu_native_assessment.json
+ D results/stage45a_validation/orsreg_1_native_comparison.json
+ D results/stage45a_validation/pores_3_cpu_fixed_p.jsonl
+ D results/stage45a_validation/pores_3_cpu_fixed_p_assessment.json
+ D results/stage45a_validation/pores_3_cpu_native.jsonl
+ D results/stage45a_validation/pores_3_cpu_native_P.mtx
+ D results/stage45a_validation/pores_3_cpu_native_assessment.json
+ D results/stage45a_validation/pores_3_fixed_p_comparison.json
+ D results/stage45a_validation/pores_3_gpu_fixed_p.jsonl
+ D results/stage45a_validation/pores_3_gpu_fixed_p_assessment.json
+ D results/stage45a_validation/pores_3_gpu_native.jsonl
+ D results/stage45a_validation/pores_3_gpu_native_assessment.json
+ D results/stage45a_validation/pores_3_native_comparison.json
+ D results/stage45a_validation/pores_3_reference80_120.json
+ D results/stage45a_validation/saylr1_cpu_fixed_p.jsonl
+ D results/stage45a_validation/saylr1_cpu_fixed_p_assessment.json
+ D results/stage45a_validation/saylr1_cpu_native.jsonl
+ D results/stage45a_validation/saylr1_cpu_native_P.mtx
+ D results/stage45a_validation/saylr1_cpu_native_assessment.json
+ D results/stage45a_validation/saylr1_fixed_p_comparison.json
+ D results/stage45a_validation/saylr1_gpu_fixed_p.jsonl
+ D results/stage45a_validation/saylr1_gpu_fixed_p_assessment.json
+ D results/stage45a_validation/saylr1_gpu_native.jsonl
+ D results/stage45a_validation/saylr1_gpu_native_assessment.json
+ D results/stage45a_validation/saylr1_native_comparison.json
+ D results/stage45a_validation/saylr1_reference80_120.json
+ D results/stage45a_validation/sherman4_cpu_native.jsonl
+ D results/stage45a_validation/sherman4_cpu_native_assessment.json
+ D results/stage45a_validation/sherman4_gpu_native.jsonl
+ D results/stage45a_validation/sherman4_gpu_native_assessment.json
+ D results/stage45a_validation/sherman4_native_comparison.json
+ D results/stage45a_validation/steam1_cpu_fixed_p.jsonl
+ D results/stage45a_validation/steam1_cpu_fixed_p_assessment.json
+ D results/stage45a_validation/steam1_cpu_native.jsonl
+ D results/stage45a_validation/steam1_cpu_native_P.mtx
+ D results/stage45a_validation/steam1_cpu_native_assessment.json
+ D results/stage45a_validation/steam1_fixed_p_comparison.json
+ D results/stage45a_validation/steam1_gpu_fixed_p.jsonl
+ D results/stage45a_validation/steam1_gpu_fixed_p_assessment.json
+ D results/stage45a_validation/steam1_gpu_native.jsonl
+ D results/stage45a_validation/steam1_gpu_native_assessment.json
+ D results/stage45a_validation/steam1_native_comparison.json
+ D results/stage45a_validation/steam1_reference80_120.json
+ D results/stage45a_validation/steam3_cpu_fixed_p.jsonl
+ D results/stage45a_validation/steam3_cpu_fixed_p_assessment.json
+ D results/stage45a_validation/steam3_cpu_native.jsonl
+ D results/stage45a_validation/steam3_cpu_native_P.mtx
+ D results/stage45a_validation/steam3_cpu_native_assessment.json
+ D results/stage45a_validation/steam3_fixed_p_comparison.json
+ D results/stage45a_validation/steam3_gpu_fixed_p.jsonl
+ D results/stage45a_validation/steam3_gpu_fixed_p_assessment.json
+ D results/stage45a_validation/steam3_gpu_native.jsonl
+ D results/stage45a_validation/steam3_gpu_native_assessment.json
+ D results/stage45a_validation/steam3_native_comparison.json
+ D results/stage45a_validation/steam3_reference80_120.json
+ M scripts/build_cuda_msvc.cmd
+ D scripts/generate_stage45a_synthetic.py
+ D scripts/untimed_screen.py
+ M src/cpu.cpp
+ M src/cuda_environment.cpp
+ M src/cuda_gmres.cu
+ M src/cuda_hybrid_main.cpp
+ M src/cuda_ir.cpp
+ M src/cuda_norm_probe.cpp
+ M src/cuda_spai.cu
+ M src/cuda_spmv.cu
+ M src/gmres.cpp
+ M src/ir.cpp
+ M src/main.cpp
+ M src/spai.cpp
+ D tests/assess_stage45a.py
+ M tests/check_cuda_gmres_decimal.py
+ M tests/check_cuda_ir_cli.py
+ M tests/check_cuda_ir_decimal.py
+ M tests/check_cuda_spai_cli.py
+ M tests/check_cuda_spai_decimal.py
+ D tests/collect_stage45a_assessment.py
+ D tests/compare_stage45a.py
+ D tests/probe_cuda_norm.cu
+ D tests/probe_rank_cases.cpp
+ D tests/reference_stage45a.py
+ D tests/run_stage45a_assessment.py
+ M tests/test_cuda_spai.cpp
+ D tests/test_stage45a_generator.py
+ D tests/untimed_screen.cpp
+?? .clang-format
+?? README.md
+?? cmake/
+?? docs/CLEANUP_FORMATTING.md
+?? docs/CLEANUP_INDEPENDENT_REVIEW.md
+?? docs/CLEANUP_PACKAGE_VALIDATION.md
+?? docs/CLEANUP_PLAN.md
+?? docs/CLEANUP_RECORD.md
+?? docs/CLEANUP_SOURCE_REVIEW.md
+?? docs/EXPERIMENT2A_FP32_SPEC.md
+?? docs/EXPERIMENT2A_LIVE_HANDOFF.md
+?? docs/README.md
+?? include/bspai/fp32.hpp
+?? include/bspai/fp32_cuda_gmres.hpp
+?? include/bspai/fp32_cuda_spai.hpp
+?? include/bspai/fp32_cuda_spmv.hpp
+?? results/README.md
+?? safeguards/
+?? scripts/build_windows.cmd
+?? scripts/package_submission.py
+?? scripts/research_archive.py
+?? src/fp32_cpu.cpp
+?? src/fp32_cuda_gmres.cu
+?? src/fp32_cuda_spai.cu
+?? src/fp32_cuda_spmv.cu
+?? src/solver_main.cpp
+?? tests/check_release_cpu_decimal.py
+?? tests/check_solver_cli.py
+?? tests/cuda_test_env.py
+?? tests/release_cpu_snapshot.cpp
+?? tests/test_fp32.cpp
+?? tests/test_fp32_cuda_gmres.cpp
+?? tests/test_fp32_cuda_spai.cpp
+?? tests/test_fp32_cuda_spmv.cpp
+?? tests/test_submission_tools.py
